@@ -40,8 +40,8 @@ const LoginScreen = ({ navigation }) => {
       <Text style={styles.heading}>PhonoFix</Text>
       <Text style={styles.subHeading}>Login to your account</Text>
 
-      <TextInput style={styles.input} placeholder="Username" />
-      <TextInput style={styles.input} placeholder="Password" secureTextEntry />
+      <TextInput style={styles.input} placeholder="Username" placeholderTextColor="white"/>
+      <TextInput style={styles.input} placeholder="Password" secureTextEntry placeholderTextColor="white" />
 
       {/* <TouchableOpacity onPress={handleForgotPassword}>
         <Text style={styles.forgotPassword}>Forgot your password?</Text>
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   yellowButton: {
-    backgroundColor: "yellow",
+    backgroundColor: "#FBB718",
     padding: 15,
     borderRadius: 10,
     width: "100%",

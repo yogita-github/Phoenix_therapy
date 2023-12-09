@@ -30,6 +30,7 @@ const Register = ({ navigation }) => {
       <TextInput
         style={styles.input}
         placeholder="Name"
+        placeholderTextColor="white"
         value={name}
         onChangeText={(text) => setName(text)}
       />
@@ -37,6 +38,7 @@ const Register = ({ navigation }) => {
       <TextInput
         style={styles.input}
         placeholder="Email"
+        placeholderTextColor="white"
         value={email}
         onChangeText={(text) => setEmail(text)}
         keyboardType="email-address"
@@ -45,6 +47,7 @@ const Register = ({ navigation }) => {
       <TextInput
         style={styles.input}
         placeholder="Password"
+        placeholderTextColor="white"
         value={password}
         onChangeText={(text) => setPassword(text)}
         secureTextEntry
@@ -109,6 +112,7 @@ const styles = StyleSheet.create({
   input: {
     width: "100%",
     height: 40,
+    color: "white",
     borderColor: "gray",
     borderWidth: 1,
     borderRadius: 5,
@@ -117,7 +121,7 @@ const styles = StyleSheet.create({
     color: "white",
   },
   yellowButton: {
-    backgroundColor: "yellow",
+    backgroundColor: "#FBB718",
     padding: 15,
     borderRadius: 10,
     width: "100%",
@@ -146,6 +150,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     justifyContent: "space-around",
+    marginRight: 10, 
+    marginLeft: 10, // Add this property to create spacing between buttons
   },
   socialButtonIcon: {
     width: 20,
@@ -156,6 +162,7 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "bold",
   },
+
   loginLink: {
     color: "white",
     marginTop: 20,

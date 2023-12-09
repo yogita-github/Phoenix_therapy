@@ -5,7 +5,7 @@ import { View, Text, Button } from 'react-native';
 const HomeScreen = ({ navigation }) => (
   <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
     <Text>Home Screen</Text>
-    <Button title="Go Login" onPress={() => navigation.navigate("Login")} />
+    <Button title="Test" onPress={() => navigation.navigate("Test")} />
     <Button title="Games" onPress={() => navigation.navigate("Games")} />
     <Button title="HomeSide" onPress={() => navigation.navigate("HomeSide")} />
     <Button title="Balloon" onPress={() => navigation.navigate("Balloon")} />

@@ -18,9 +18,9 @@ export default function Testing() {
 
   const handleRefresh = () => {
     clearRecordings();
+    setCurrentAction('start'); // Set the currentAction to 'start'
     setRandomData(getRandomData());
   };
-
   useEffect(() => {
     handleRefresh();
   }, []); 
@@ -63,7 +63,7 @@ export default function Testing() {
     }
   };
 
-  async function handleButtonPress() {
+  const handleButtonPress = async () => {
     switch (currentAction) {
       case 'start':
         await startRecording();
@@ -80,7 +80,8 @@ export default function Testing() {
       default:
         break;
     }
-  }
+  };
+  
 
   async function startRecording() {
     try {
@@ -216,7 +217,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#2ecc71',
   },
   row: {
-    marginTop: 40,
+    marginTop: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -250,7 +251,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FBB718',
     padding: 15,
     borderRadius: 10,
-    marginTop: 30,
+    marginTop: 10,
   },
   postButtonText: {
     color: 'white',
@@ -270,6 +271,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   noticeText: {
+    marginBottom: 10,
     flex: 1,
     textAlign:"center",
     color: 'green',
@@ -292,5 +294,6 @@ const styles = StyleSheet.create({
   randomDataText: {
     fontSize: 25,
     fontWeight: 'bold',
+    textAlign:"center",
   },
 });

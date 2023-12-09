@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   yellowButton: {
-    backgroundColor: "yellow",
+    backgroundColor: "#FBB718",
     padding: 15,
     borderRadius: 10,
     marginBottom: 10,
