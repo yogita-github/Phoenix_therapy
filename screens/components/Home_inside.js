@@ -4,104 +4,108 @@ import { View, Image, Text, StyleSheet } from "react-native";
 const HomeSide = () => {
   return (
     <>
-      <View style={styles.container}>
-       
+      <View style={{ backgroundColor: "#FFF2CC" }}>
+        <View style={styles.container}>
           <Text style={styles.homeText}>Home</Text>
-          
-        <Text style={styles.heading}> Therapy provided in different ways</Text>
-      </View>
 
-      <View style={{ flexDirection: "row" }}>
-        <View
-          style={{
-            flex: 1,
-            backgroundColor: "#FBB718",
-            borderRadius: 5,
-            margin: 5,
-            padding: 10,
-          }}
-        >
-          <Image
-            source={require("../../assets/balloon.jpg")}
-            style={{
-              width: "100%",
-              height: 100,
-              borderRadius: 5,
-              marginBottom: 10,
-            }}
-          />
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            Heading 1
+          <Text style={styles.heading}>
+            {" "}
+            Therapy provided in different ways
           </Text>
         </View>
-        <View
-          style={{
-            flex: 1,
-            backgroundColor: "#FBB718",
-            borderRadius: 5,
-            margin: 5,
-            padding: 10,
-          }}
-        >
-          <Image
-            source={require("../../assets/pronounce.jpg")}
-            style={{
-              width: "100%",
-              height: 100,
-              borderRadius: 5,
-              marginBottom: 10,
-            }}
-          />
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            Heading 2
-          </Text>
-        </View>
-      </View>
 
-      <View style={{ flexDirection: "row" }}>
-        <View
-          style={{
-            flex: 1,
-            backgroundColor: "#FBB718",
-            borderRadius: 5,
-            margin: 5,
-            padding: 10,
-          }}
-        >
-          <Image
-            source={require("../../assets/quizSound.jpg")}
+        <View style={{ flexDirection: "row" }}>
+          <View
             style={{
-              width: "100%",
-              height: 100,
+              flex: 1,
+              backgroundColor: "#FBB718",
               borderRadius: 5,
-              marginBottom: 10,
+              margin: 10,
+              padding: 5,
             }}
-          />
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            Heading 3
-          </Text>
+          >
+            <Image
+              source={require("../../assets/games.png")}
+              style={{
+                width: "100%",
+                height: 100,
+                borderRadius: 5,
+                marginBottom: 10,
+              }}
+            />
+            <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+              Games
+            </Text>
+          </View>
+          <View
+            style={{
+              flex: 1,
+              backgroundColor: "#FBB718",
+              borderRadius: 5,
+              margin: 10,
+              padding: 5,
+            }}
+          >
+            <Image
+              source={require("../../assets/activities.png")}
+              style={{
+                width: "100%",
+                height: 100,
+                borderRadius: 5,
+                marginBottom: 10,
+              }}
+            />
+            <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+              Activities
+            </Text>
+          </View>
         </View>
-        <View
-          style={{
-            flex: 1,
-            backgroundColor: "#FBB718",
-            borderRadius: 5,
-            margin: 5,
-            padding: 10,
-          }}
-        >
-          <Image
-            source={require("../../assets/articulationmaze.jpg")}
+
+        <View style={{ flexDirection: "row" }}>
+          <View
             style={{
-              width: "100%",
-              height: 100,
+              flex: 1,
+              backgroundColor: "#FBB718",
               borderRadius: 5,
-              marginBottom: 10,
+              margin: 10,
+              padding: 5,
             }}
-          />
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            Heading 4
-          </Text>
+          >
+            <Image
+              source={require("../../assets/Peer-to-Peer.png")}
+              style={{
+                width: "100%",
+                height: 100,
+                borderRadius: 5,
+                marginBottom: 10,
+              }}
+            />
+            <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+              Peer-to-Peer
+            </Text>
+          </View>
+          <View
+            style={{
+              flex: 1,
+              backgroundColor: "#FBB718",
+              borderRadius: 5,
+              margin: 10,
+              padding: 5,
+            }}
+          >
+            <Image
+              source={require("../../assets/Exercise.png")}
+              style={{
+                width: "100%",
+                height: 100,
+                borderRadius: 5,
+                marginBottom: 10,
+              }}
+            />
+            <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+              Exercise
+            </Text>
+          </View>
         </View>
       </View>
     </>
@@ -112,7 +116,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
     alignItems: "center",
-    backgroundColor: "#FFF2CC",
+    
   },
  
   heading: {

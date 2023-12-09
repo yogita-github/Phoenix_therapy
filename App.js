@@ -9,6 +9,9 @@ import IntroPage from './screens/components/IntroPage';
 import Register from './screens/components/Register';
 import Testing from './screens/Testing';
 import BottomNavigator from './screens/BottomNavigator';
+import Therapy from './screens/components/Therapy';
+import Profile from './screens/components/Profile';
+import Progress from './screens/components/Progress';
 
 const Stack = createStackNavigator();
 
@@ -26,6 +29,9 @@ const App = () => (
       <Stack.Screen name="Balloon" component={Balloon} />
       <Stack.Screen name="IntroPage" component={IntroPage} />
       <Stack.Screen name="Register" component={Register} />
+      <Stack.Screen name="Therapy" component={Therapy} />
+      <Stack.Screen name="Profile" component={Profile} />
+      <Stack.Screen name="Progress" component={Progress} />
     </Stack.Navigator>
   </NavigationContainer>
 );

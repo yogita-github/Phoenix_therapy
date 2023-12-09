@@ -8,9 +8,7 @@ const IntroPage = ({ navigation }) => {
 
       <Image
         style={styles.image}
-        source={{
-          uri: "https://media.istockphoto.com/id/1062169958/vector/vector-illustration-flat-style-businessmen-discuss-social-network-group-of-people-news.jpg?s=2048x2048&w=is&k=20&c=oI2y8vT4lNpPK0f08XcNW1VtpxKr2nxuUxHKWSKCYwc=",
-        }} // Replace with the actual path to your image
+        source={require("../../assets/firstpage.png")} // Replace with the actual path to your image
         resizeMode="cover"
       />
 
@@ -51,8 +49,8 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   image: {
-    width: 200,
-    height: 200,
+    width: 230,
+    height: 180,
     borderRadius: 10,
     marginBottom: 20,
   },

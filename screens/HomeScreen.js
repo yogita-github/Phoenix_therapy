@@ -10,6 +10,9 @@ const HomeScreen = ({ navigation }) => (
     <Button title="HomeSide" onPress={() => navigation.navigate("HomeSide")} />
     <Button title="Balloon" onPress={() => navigation.navigate("Balloon")} />
     <Button title="Register" onPress={() => navigation.navigate("Register")} />
+    <Button title="Therapy" onPress={() => navigation.navigate("Therapy")} />
+    <Button title="Profile" onPress={() => navigation.navigate("Profile")} />
+    <Button title="Progress" onPress={() => navigation.navigate("ProgressPage")} />
     <Button
       title="IntroPage"
       onPress={() => navigation.navigate("IntroPage")}
