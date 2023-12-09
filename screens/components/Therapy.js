@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
   yellowBoxesContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginVertical: 20,
+    marginVertical: 10,
     marginLeft: 20,
     marginRight: 20,
   },
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   image: {
-    width: 10,
+    width: 100,
     height: 100,
     marginBottom: 10,
   },

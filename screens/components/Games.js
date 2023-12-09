@@ -53,7 +53,7 @@ const Games = () => {
           }}
         >
           <Image
-            source={require("../../assets/pronounce.jpg")}
+            source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFPQxXGeIa1V82w4mJlFvc46kVUHfnKI-a-A&usqp=CAU"}}
             style={{
               width: "100%",
               height: 100,
@@ -62,7 +62,7 @@ const Games = () => {
             }}
           />
           <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            Pronouncing Words
+            Tongue Twister
           </Text>
         </View>
       </View>
@@ -78,7 +78,7 @@ const Games = () => {
           }}
         >
           <Image
-            source={require("../../assets/quizSound.jpg")}
+            source={require("../../assets/quizsound.png")}
             style={{
               width: "100%",
               height: 100,
@@ -100,7 +100,7 @@ const Games = () => {
           }}
         >
           <Image
-            source={require("../../assets/articulationmaze.jpg")}
+            source={require("../../assets/articulationmaze.png")}
             style={{
               width: "100%",
               height: 100,

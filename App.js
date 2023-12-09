@@ -12,17 +12,22 @@ import BottomNavigator from './screens/BottomNavigator';
 import Therapy from './screens/components/Therapy';
 import Profile from './screens/components/Profile';
 import Progress from './screens/components/Progress';
+import QuizGame from './screens/components/QuizGame';
+import TongueTwisterGame from './screens/components/TongueTwister';
+// import ArticulationMaze from './screens/components/ArticulationMaze';
+
+
 
 const Stack = createStackNavigator();
 
 const App = () => (
   <NavigationContainer>
     <Stack.Navigator initialRouteName="Home">
-    <Stack.Screen
-          name="Main"
-          component={BottomNavigator}
-          options={{ headerShown: false }}
-        />
+      <Stack.Screen
+        name="Main"
+        component={BottomNavigator}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen name="Test" component={Testing} />
       <Stack.Screen name="Games" component={Games} />
       <Stack.Screen name="HomeSide" component={HomeSide} />
@@ -32,6 +37,9 @@ const App = () => (
       <Stack.Screen name="Therapy" component={Therapy} />
       <Stack.Screen name="Profile" component={Profile} />
       <Stack.Screen name="Progress" component={Progress} />
+      <Stack.Screen name="QuizGame" component={QuizGame} />
+      <Stack.Screen name="TongueTwisterGame" component={TongueTwisterGame} />
+      {/* <Stack.Screen name="ArticulationMaze" component={ArticulationMaze} /> */}
     </Stack.Navigator>
   </NavigationContainer>
 );
