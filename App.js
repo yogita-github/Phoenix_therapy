@@ -18,6 +18,9 @@ import ArticulationMaze from './screens/components/ArticulationMaze';
 import Sentence from './screens/components/Sentence';
 import Idioms from "./screens/components/Idioms";
 import AgeTherapy from './screens/components/AgeTherapy';
+import LipsExercise from './screens/components/LipsExercise';
+import MouthExercise from './screens/components/MouthExercise';
+import TongueExercise from './screens/components/TongueExercise';
 // import MirrorTherapy from "./screens/components/MirrorTherapy";
 
 
@@ -48,6 +51,9 @@ const App = () => (
       <Stack.Screen name="AgeTherapy" component={AgeTherapy} />
       {/* <Stack.Screen name="MirrorTherapy" component={MirrorTherapy} /> */}
       <Stack.Screen name="ArticulationMaze" component={ArticulationMaze} />
+      <Stack.Screen name="LipsExercise" component={LipsExercise} />
+      <Stack.Screen name="TongueExercise" component={TongueExercise} />
+      <Stack.Screen name="MouthExercise" component={MouthExercise} />
     </Stack.Navigator>
   </NavigationContainer>
 );

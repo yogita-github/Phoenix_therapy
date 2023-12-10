@@ -16,7 +16,22 @@ const HomeScreen = ({ navigation }) => (
     <Button title="QuizGame" onPress={() => navigation.navigate("QuizGame")} />
     <Button title="Sentence" onPress={() => navigation.navigate("Sentence")} />
     <Button title="Idioms" onPress={() => navigation.navigate("Idioms")} />
-    <Button title="AgeTherapy" onPress={() => navigation.navigate("AgeTherapy")} />
+    <Button
+      title="LipsExercise"
+      onPress={() => navigation.navigate("LipsExercise")}
+    />
+    <Button
+      title="TongueExercise"
+      onPress={() => navigation.navigate("TongueExercise")}
+    />
+    <Button
+      title="MouthExercise"
+      onPress={() => navigation.navigate("MouthExercise")}
+    />
+    <Button
+      title="AgeTherapy"
+      onPress={() => navigation.navigate("AgeTherapy")}
+    />
     {/* <Button title="MirrorTherapy" onPress={() => navigation.navigate("MirrorTherapy")} /> */}
     <Button
       title="TongueTwister"
