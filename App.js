@@ -14,7 +14,11 @@ import Profile from './screens/components/Profile';
 import Progress from './screens/components/Progress';
 import QuizGame from './screens/components/QuizGame';
 import TongueTwisterGame from './screens/components/TongueTwister';
-// import ArticulationMaze from './screens/components/ArticulationMaze';
+import ArticulationMaze from './screens/components/ArticulationMaze';
+import Sentence from './screens/components/Sentence';
+import Idioms from "./screens/components/Idioms";
+import AgeTherapy from './screens/components/AgeTherapy';
+// import MirrorTherapy from "./screens/components/MirrorTherapy";
 
 
 
@@ -39,7 +43,11 @@ const App = () => (
       <Stack.Screen name="Progress" component={Progress} />
       <Stack.Screen name="QuizGame" component={QuizGame} />
       <Stack.Screen name="TongueTwisterGame" component={TongueTwisterGame} />
-      {/* <Stack.Screen name="ArticulationMaze" component={ArticulationMaze} /> */}
+      <Stack.Screen name="Sentence" component={Sentence} />
+      <Stack.Screen name="Idioms" component={Idioms} />
+      <Stack.Screen name="AgeTherapy" component={AgeTherapy} />
+      {/* <Stack.Screen name="MirrorTherapy" component={MirrorTherapy} /> */}
+      <Stack.Screen name="ArticulationMaze" component={ArticulationMaze} />
     </Stack.Navigator>
   </NavigationContainer>
 );

@@ -26,5 +26,21 @@
     "web": {
       "favicon": "./assets/favicon.png"
     }
-  }
-}
+  },
+ 
+      "android": {
+        "permissions": [
+          "CAMERA",
+          "RECORD_AUDIO"
+        ]
+      },
+      "ios": {
+        "permissions": {
+          "camera": {
+            "description": "Allow the app to use your camera"
+          }
+        }
+      }
+    }
+ 
+
