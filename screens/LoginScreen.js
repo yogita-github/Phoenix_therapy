@@ -1,16 +1,5 @@
 
-// import React from 'react';
-// import { View, Text } from 'react-native';
-
-// const LoginScreen = () => (
-//   <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-//     <Text>Login</Text>
-//   </View>
-// );
-
-// export default LoginScreen;
-
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -19,29 +8,52 @@ import {
   StyleSheet,
   Image,
 } from "react-native";
+import * as SecureStore from "expo-secure-store";
 
 const LoginScreen = ({ navigation }) => {
+  const [name, setname] = useState("");
+  const [password, setPassword] = useState("");
   const handleForgotPassword = () => {
     // Handle forgot password logic here
     // For simplicity, we are just navigating to the register page
     navigation.navigate("RegisterPage");
   };
 
-  const handleLogin = () => {
-    // Handle login logic here
-    // You can add your own logic to authenticate the user
-    // For simplicity, we are not implementing authentication in this example
-    // You can replace the alert with your authentication logic
-    navigation.navigate("HomeSide");
-  };
+  const handleLogin = async () => {
+    try {
+      const response = await fetch("http://192.168.43.65:1000/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name,
+          password: password,
+        }),
+      });
 
+      if (response.ok) {
+        const result = await response.json();
+        console.log("Login successful:", result);
+        await SecureStore.setItemAsync("token", result.token);
+
+        navigation.navigate("Home");
+      } else {
+        console.error("Login failed:", response.status);
+        alert("Login failed. Please check your credentials.");
+      }
+    } catch (error) {
+      console.error("Error during login:", error);
+      alert("An error occurred during login. Please try again.");
+    }
+  };
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>PhonoFix</Text>
       <Text style={styles.subHeading}>Login to your account</Text>
 
-      <TextInput style={styles.input} placeholder="Username" placeholderTextColor="white"/>
-      <TextInput style={styles.input} placeholder="Password" secureTextEntry placeholderTextColor="white" />
+      <TextInput style={styles.input} placeholder="Username" placeholderTextColor="white"  onChangeText={(text) => setname(text)}/>
+      <TextInput style={styles.input} placeholder="Password" secureTextEntry placeholderTextColor="white"  onChangeText={(text) => setPassword(text)} />
 
       {/* <TouchableOpacity onPress={handleForgotPassword}>
         <Text style={styles.forgotPassword}>Forgot your password?</Text>

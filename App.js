@@ -22,6 +22,8 @@ import LipsExercise from './screens/components/LipsExercise';
 import MouthExercise from './screens/components/MouthExercise';
 import TongueExercise from './screens/components/TongueExercise';
 import Exercise from "./screens/components/Exercise";
+import ButtonPage from './screens/ButtonPage';
+import VideoPage from './screens/VideoPage';
 // import MirrorTherapy from "./screens/components/MirrorTherapy";
 
 
@@ -56,6 +58,8 @@ const App = () => (
       <Stack.Screen name="TongueExercise" component={TongueExercise} />
       <Stack.Screen name="MouthExercise" component={MouthExercise} />
       <Stack.Screen name="Exercise" component={Exercise} />
+      <Stack.Screen name="ButtonPage" component={ButtonPage} />
+      <Stack.Screen name="VideoPage" component={VideoPage} />
     </Stack.Navigator>
   </NavigationContainer>
 );
