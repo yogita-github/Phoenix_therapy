@@ -5,9 +5,9 @@ const AgeTherapy = () => {
   const [selectedAgeCategory, setSelectedAgeCategory] = useState("small");
 
   const ageCategories = [
-    { label: "Small Age", value: "small" },
-    { label: "Medium Age", value: "medium" },
-    { label: "Big Age", value: "big" },
+    { label: "0-15 years", value: "small" },
+    { label: "16-30 years", value: "medium" },
+    { label: "31-60 years", value: "big" },
   ];
 
   const smallAgeWords = [

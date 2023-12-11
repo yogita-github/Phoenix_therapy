@@ -14,7 +14,7 @@ const audioFiles = [
 ];
 
 const phrases = [
-  "Improve your pronunciation!",
+  "Believe you can and you’re halfway there.”",
   "Enhance your speech clarity!",
   "Practice speaking faster!",
   "Perfect your speech rhythm!",
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#48C9B0", // Light Grey background
+    backgroundColor: "#FFEEA2", // Light Grey background
   },
   tongueTwisterText: {
     fontSize: 18,

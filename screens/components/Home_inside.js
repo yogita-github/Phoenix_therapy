@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Image, Text, StyleSheet } from "react-native";
 
-const HomeSide = () => {
+const HomeSide = ({navigation}) => {
   return (
     <>
       <View style={{ backgroundColor: "#FFF2CC" }}>
@@ -33,7 +33,10 @@ const HomeSide = () => {
                 marginBottom: 10,
               }}
             />
-            <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+            <Text
+              style={{ textAlign: "center", fontWeight: "bold" }}
+              onPress={() => navigation.navigate("Games")}
+            >
               Games
             </Text>
           </View>
@@ -102,7 +105,10 @@ const HomeSide = () => {
                 marginBottom: 10,
               }}
             />
-            <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+            <Text
+              style={{ textAlign: "center", fontWeight: "bold" }}
+              onPress={() => navigation.navigate("Exercise")}
+            >
               Exercise
             </Text>
           </View>

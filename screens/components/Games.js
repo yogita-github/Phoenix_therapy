@@ -30,7 +30,6 @@ const Games = () => {
           }}
         >
           <Image
-            
             source={require("../../assets/balloon.jpg")}
             style={{
               width: "100%",
@@ -39,7 +38,10 @@ const Games = () => {
               marginBottom: 10,
             }}
           />
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+          <Text
+            style={{ textAlign: "center", fontWeight: "bold" }}
+            onPress={() => navigation.navigate("Balloon")}
+          >
             Balloon Game
           </Text>
         </View>
@@ -53,7 +55,9 @@ const Games = () => {
           }}
         >
           <Image
-            source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFPQxXGeIa1V82w4mJlFvc46kVUHfnKI-a-A&usqp=CAU"}}
+            source={{
+              uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFPQxXGeIa1V82w4mJlFvc46kVUHfnKI-a-A&usqp=CAU",
+            }}
             style={{
               width: "100%",
               height: 100,
@@ -61,7 +65,10 @@ const Games = () => {
               marginBottom: 10,
             }}
           />
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+          <Text
+            style={{ textAlign: "center", fontWeight: "bold" }}
+            onPress={() => navigation.navigate("TongueTwister")}
+          >
             Tongue Twister
           </Text>
         </View>
@@ -86,7 +93,10 @@ const Games = () => {
               marginBottom: 10,
             }}
           />
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+          <Text
+            style={{ textAlign: "center", fontWeight: "bold" }}
+            onPress={() => navigation.navigate("QuizGame")}
+          >
             Quiz Sound
           </Text>
         </View>
@@ -108,7 +118,10 @@ const Games = () => {
               marginBottom: 10,
             }}
           />
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+          <Text
+            style={{ textAlign: "center", fontWeight: "bold" }}
+            onPress={() => navigation.navigate("ArticulationMaze")}
+          >
             Articulation Maze
           </Text>
         </View>
