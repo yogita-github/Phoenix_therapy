@@ -1,4 +1,4 @@
-// LipsExercisePage.js
+// TongueExercisePage.js
 import React from "react";
 import {
   ScrollView,
@@ -12,32 +12,44 @@ import Collapsible from "react-native-collapsible";
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#5FFAF3",
+    backgroundColor: "#FFFBEF",
     flex: 1,
     padding: 16,
   },
   heading: {
     fontSize: 24,
     fontWeight: "bold",
-    marginBottom: 100,
+    marginBottom: 20,
     textAlign: "center",
+    borderBottomWidth: 2,
+    paddingBottom: 10,
+    borderBottomColor: "#3498db", // Change the color as needed
   },
   exerciseContainer: {
     marginBottom: 16,
+    backgroundColor: "#ecf0f1", // Change the color as needed
+    padding: 10,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: "#bdc3c7", // Change the color as needed
   },
   exerciseTitle: {
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 8,
     textAlign: "center",
+    color: "#3498db", // Change the color as needed
   },
   exerciseImage: {
     width: "100%",
     height: 200,
     marginBottom: 8,
+    borderRadius: 8,
   },
   exerciseProcedure: {
     fontSize: 16,
+    marginTop: 10,
+    color: "#2c3e50", // Change the color as needed
   },
 });
 

@@ -7,13 +7,13 @@ import videos from '../videos.json';
 // Assuming that videos and images are in the 'assets' directory
 const videoAssets = {
   'video1.mp4': require('../assets/videos/video1.mp4'),
-  'video2.mp4': require('../assets/videos/video2.mp4'),
+  // 'video2.mp4': require('../assets/videos/video2.mp4'),
   // Add more videos as needed
 };
 
 const imageAssets = {
-  'image1.jpg': require('../assets/images/image1.jpg'),
-  'image2.jpg': require('../assets/images/image2.jpg'),
+  'image1.jpg': require('../assets/Addition.png'),
+  // 'image2.jpg': require('../assets/images/image2.jpg'),
   // Add more images as needed
 };
 
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   video: {
-    width: 350,
+    width: 300,
     height: 200,
     marginTop: 20,
   },

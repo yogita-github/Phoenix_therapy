@@ -25,22 +25,23 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "react-native-vision-camera"
+      
+    ]
   },
- 
-      "android": {
-        "permissions": [
-          "CAMERA",
-          "RECORD_AUDIO"
-        ]
-      },
-      "ios": {
-        "permissions": {
-          "camera": {
-            "description": "Allow the app to use your camera"
-          }
-        }
+  "android": {
+    "permissions": [
+      "CAMERA",
+      "RECORD_AUDIO"
+    ]
+  },
+  "ios": {
+    "permissions": {
+      "camera": {
+        "description": "Allow the app to use your camera"
       }
     }
- 
-
+  }
+}

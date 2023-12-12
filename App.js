@@ -24,15 +24,22 @@ import TongueExercise from './screens/components/TongueExercise';
 import Exercise from "./screens/components/Exercise";
 import ButtonPage from './screens/ButtonPage';
 import VideoPage from './screens/VideoPage';
+import LetsStart from "./screens/components/LetsStart";
+import SelfLearning2 from "./screens/components/SelfLearning2"
+import SplashScreen from './screens/components/SplashScreen';
+import Activities from "./screens/components/Activities";
+import MirrorTherapy from './screens/components/MirrorTherapy';
 // import MirrorTherapy from "./screens/components/MirrorTherapy";
 
 
 
 const Stack = createStackNavigator();
 
+
+
 const App = () => (
   <NavigationContainer>
-    <Stack.Navigator initialRouteName="Home">
+    <Stack.Navigator initialRouteName="LetsStart">
       <Stack.Screen
         name="Main"
         component={BottomNavigator}
@@ -51,7 +58,9 @@ const App = () => (
       <Stack.Screen name="TongueTwisterGame" component={TongueTwisterGame} />
       <Stack.Screen name="Sentence" component={Sentence} />
       <Stack.Screen name="Idioms" component={Idioms} />
+      <Stack.Screen name="MirrorTherapy" component={MirrorTherapy} />
       <Stack.Screen name="AgeTherapy" component={AgeTherapy} />
+      <Stack.Screen name="Activities" component={Activities}/>
       {/* <Stack.Screen name="MirrorTherapy" component={MirrorTherapy} /> */}
       <Stack.Screen name="ArticulationMaze" component={ArticulationMaze} />
       <Stack.Screen name="LipsExercise" component={LipsExercise} />
@@ -60,6 +69,9 @@ const App = () => (
       <Stack.Screen name="Exercise" component={Exercise} />
       <Stack.Screen name="ButtonPage" component={ButtonPage} />
       <Stack.Screen name="VideoPage" component={VideoPage} />
+      <Stack.Screen name="LetsStart" component={LetsStart} />
+      <Stack.Screen name="SelfLearning2" component={SelfLearning2} />
+      <Stack.Screen name="SplashScreen" component={SplashScreen} />
     </Stack.Navigator>
   </NavigationContainer>
 );

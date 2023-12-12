@@ -1,4 +1,3 @@
-// LipsExercisePage.js
 import React from "react";
 import {
   ScrollView,
@@ -12,18 +11,25 @@ import Collapsible from "react-native-collapsible";
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#5FFAF3",
+    backgroundColor: "#FFFBEF",
     flex: 1,
     padding: 16,
   },
   heading: {
     fontSize: 24,
     fontWeight: "bold",
-    marginBottom: 100,
+    marginBottom: 20,
     textAlign: "center",
+    borderBottomWidth: 2,
+    paddingBottom: 10,
   },
   exerciseContainer: {
     marginBottom: 16,
+    borderColor: "#EAEAEA",
+    borderWidth: 1,
+    backgroundColor: "#FFFFFF",
+    borderRadius: 8,
+    padding: 10,
   },
   exerciseTitle: {
     fontSize: 18,
@@ -35,9 +41,11 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 200,
     marginBottom: 8,
+    borderRadius: 8,
   },
   exerciseProcedure: {
     fontSize: 16,
+    marginTop: 10,
   },
 });
 
@@ -69,7 +77,7 @@ const MouthExercise = () => {
         }}
         procedure="Procedure:
 
-If your child is speaking too fast, it can affect his/her speech clarity. It is recommended that you encourage your child to speak slowly. This inturn will help improve speech clarity."
+If your child is speaking too fast, it can affect his/her speech clarity. It is recommended that you encourage your child to speak slowly. This in turn will help improve speech clarity."
       />
       <CollapsibleComponent
         title=" Click on Oro-motor exercise"
@@ -79,7 +87,7 @@ If your child is speaking too fast, it can affect his/her speech clarity. It is 
         procedure="Procedure:
 
 
-Select any liquid of thick consistency as per child’s liking for example nutella, honey, ketchup etc. Place the liquid at different positions of the oral cavity such as the corner of lips, behind the teeth, roof of the mouth etc. and ask the child to lick it using their tongue tip."
+Select any liquid of thick consistency as per child’s liking for example Nutella, honey, ketchup etc. Place the liquid at different positions of the oral cavity such as the corner of lips, behind the teeth, roof of the mouth, etc., and ask the child to lick it using their tongue tip."
       />
       <CollapsibleComponent
         title=" Click on Multisensory mode"
@@ -88,7 +96,7 @@ Select any liquid of thick consistency as per child’s liking for example nutel
         }}
         procedure="Procedure:
 
-Multisensory Input makes learning speech sounds more effective. When teaching sounds, provide inputs involving multiple senses. For example, if the child has to be taught the sound /s/, you can show how the mouth should be placed to produce the sound, which provides the child visual feedback. As you say the sound, the child gets auditory feedback. You can also give a touch(tactile) feedback by asking the child to place the hand before the mouth when saying /s/."
+Multisensory Input makes learning speech sounds more effective. When teaching sounds, provide inputs involving multiple senses. For example, if the child has to be taught the sound /s/, you can show how the mouth should be placed to produce the sound, which provides the child visual feedback. As you say the sound, the child gets auditory feedback. You can also give touch (tactile) feedback by asking the child to place the hand before the mouth when saying /s/."
       />
 
       <CollapsibleComponent
