@@ -24,7 +24,7 @@ const phrases = [
   "Challenge your speaking skills!",
 ];
 
-const TongueTwisterGame = () => {
+const TongueTwister = () => {
   const [isPlaying, setIsPlaying] = useState(
     Array(audioFiles.length).fill(false)
   );
@@ -138,4 +138,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TongueTwisterGame;
+export default TongueTwister;

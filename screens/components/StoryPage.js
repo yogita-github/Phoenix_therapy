@@ -155,7 +155,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
-const StoriesPage = () => {
+const StoriesPage = ({navigation}) => {
   const storyNames = [
     "शेर और चूहा",
     "लकड़हारा और सुनहरी कुल्हाड़ी की कहानी",

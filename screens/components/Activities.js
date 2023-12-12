@@ -3,7 +3,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 // Function to create the Activity Page
-const Activities = () => {
+const Activities = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}> Activities</Text>
@@ -13,11 +13,21 @@ const Activities = () => {
         // onPress={() => navigation.navigate('VarnamalaPage')}
         activeOpacity={0.7}
       >
-        <Text style={styles.buttonText}>वर्णमाला</Text>
+        <Text
+          style={styles.buttonText}
+          onPress={() => navigation.navigate("VarnamalaPage")}
+        >
+          Varnamala
+        </Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.activityButton} activeOpacity={0.7}>
-        <Text style={styles.buttonText}>शब्द</Text>
+        <Text
+          style={styles.buttonText}
+          onPress={() => navigation.navigate("WordsPage")}
+        >
+        Words
+        </Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.activityButton} activeOpacity={0.7}>
@@ -25,7 +35,7 @@ const Activities = () => {
           style={styles.buttonText}
           onPress={() => navigation.navigate("Sentence")}
         >
-          वाक्य
+          Sentences
         </Text>
       </TouchableOpacity>
 
@@ -34,7 +44,7 @@ const Activities = () => {
           style={styles.buttonText}
           onPress={() => navigation.navigate("Idioms")}
         >
-          मुहावरे
+          Idioms
         </Text>
       </TouchableOpacity>
 
@@ -43,7 +53,7 @@ const Activities = () => {
           style={styles.buttonText}
           onPress={() => navigation.navigate("StoryPage")}
         >
-          कहानियाँ
+          Stories
         </Text>
       </TouchableOpacity>
 

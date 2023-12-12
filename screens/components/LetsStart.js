@@ -9,7 +9,7 @@ const LetsStart = ({ navigation }) => {
           style={styles.profileIcon}
           onPress={() => navigation.navigate("Profile")}
         >
-          {/* Replace 'ProfileIcon' with the actual path or component for your profile icon */}
+          
           <Image
             source={require("../../assets/Profile.png")}
             style={{ width: 30, height: 30, tintColor: "black" }}

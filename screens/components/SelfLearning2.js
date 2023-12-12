@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View , Image} from 'react-native'
 import React from 'react'
 
-const SelfLearning2 = () => {
+const SelfLearning2 = ({navigation}) => {
   return (
     <>
       <View style={styles.container}>

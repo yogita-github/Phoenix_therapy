@@ -17,7 +17,7 @@ import Therapy from './screens/components/Therapy';
 import Profile from './screens/components/Profile';
 import Progress from './screens/components/Progress';
 import QuizGame from './screens/components/QuizGame';
-import TongueTwisterGame from './screens/components/TongueTwister';
+import TongueTwister from './screens/components/TongueTwister';
 import ArticulationMaze from './screens/components/ArticulationMaze';
 import Sentence from './screens/components/Sentence';
 import Idioms from "./screens/components/Idioms";
@@ -34,6 +34,8 @@ import SplashScreen from './screens/components/SplashScreen';
 import Activities from "./screens/components/Activities";
 import MirrorTherapy from './screens/components/MirrorTherapy';
 import PeerInside from './screens/components/PeerInside';
+import VarnamalaPage from './screens/components/VarnamalaPage';
+import WordsPage from "./screens/components/WordsPage";
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 // import MirrorTherapy from "./screens/components/MirrorTherapy";
@@ -75,14 +77,16 @@ const App = () =>{
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="Progress" component={Progress} />
         <Stack.Screen name="QuizGame" component={QuizGame} />
-        <Stack.Screen name="TongueTwisterGame" component={TongueTwisterGame} />
+        <Stack.Screen name="TongueTwister" component={TongueTwister} />
         <Stack.Screen name="Sentence" component={Sentence} />
         <Stack.Screen name="Idioms" component={Idioms} />
+        <Stack.Screen name="VarnamalaPage" component={VarnamalaPage} />
         <Stack.Screen name="MirrorTherapy" component={MirrorTherapy} />
         <Stack.Screen name="AgeTherapy" component={AgeTherapy} />
         <Stack.Screen name="Activities" component={Activities} />
         <Stack.Screen name="TodoApp" component={TodoApp} />
         <Stack.Screen name="Timer" component={Timer} />
+        <Stack.Screen name="WordsPage" component={WordsPage} />
 
         <Stack.Screen name="ArticulationMaze" component={ArticulationMaze} />
         <Stack.Screen name="LipsExercise" component={LipsExercise} />
