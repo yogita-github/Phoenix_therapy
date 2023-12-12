@@ -18,7 +18,12 @@ const LetsStart = ({ navigation }) => {
         <Text style={styles.centerText}>
           Hi, Please select one option below
         </Text>
-        <Text style={styles.mainText}>Let's Start</Text>
+        <Text
+          style={styles.mainText}
+          
+        >
+          Let's Start
+        </Text>
         <View style={[styles.rectangle1, { backgroundColor: "#B218FB" }]}>
           {/* Purplish color */}
           <Image

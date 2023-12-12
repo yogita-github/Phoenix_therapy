@@ -6,7 +6,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 const Activities = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>क्रियाएँ Activities</Text>
+      <Text style={styles.heading}> Activities</Text>
 
       <TouchableOpacity
         style={styles.activityButton}
@@ -39,7 +39,12 @@ const Activities = () => {
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.activityButton} activeOpacity={0.7}>
-        <Text style={styles.buttonText}>कहानियाँ</Text>
+        <Text
+          style={styles.buttonText}
+          onPress={() => navigation.navigate("StoryPage")}
+        >
+          कहानियाँ
+        </Text>
       </TouchableOpacity>
 
       {/* New Button */}

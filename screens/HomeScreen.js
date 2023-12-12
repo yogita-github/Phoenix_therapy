@@ -13,11 +13,15 @@ const HomeScreen = ({ navigation }) => (
     <Button title="Test" onPress={() => navigation.navigate("Test")} />
     <Button title="Therapy" onPress={() => navigation.navigate("Therapy")} />
     <Button title="Profile" onPress={() => navigation.navigate("Profile")} />
+    <Button title="PeerInside" onPress={() => navigation.navigate("PeerInside")} />
     <Button title="Progress" onPress={() => navigation.navigate("Progress")} />
     <Button title="QuizGame" onPress={() => navigation.navigate("QuizGame")} />
     <Button title="Sentence" onPress={() => navigation.navigate("Sentence")} />
     <Button title="Idioms" onPress={() => navigation.navigate("Idioms")} />
-    <Button title="Activities" onPress={() => navigation.navigate("Activities")} />
+    <Button
+      title="Activities"
+      onPress={() => navigation.navigate("Activities")}
+    />
     <Button
       title="MirrorTherapy"
       onPress={() => navigation.navigate("MirrorTherapy")}

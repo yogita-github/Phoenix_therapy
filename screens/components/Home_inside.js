@@ -58,7 +58,10 @@ const HomeSide = ({navigation}) => {
                 marginBottom: 10,
               }}
             />
-            <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+            <Text
+              style={{ textAlign: "center", fontWeight: "bold" }}
+              onPress={() => navigation.navigate("Activities")}
+            >
               Activities
             </Text>
           </View>
@@ -83,7 +86,10 @@ const HomeSide = ({navigation}) => {
                 marginBottom: 10,
               }}
             />
-            <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+            <Text
+              style={{ textAlign: "center", fontWeight: "bold" }}
+              onPress={() => navigation.navigate("PeerInside")}
+            >
               Peer-to-Peer
             </Text>
           </View>

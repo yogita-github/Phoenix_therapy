@@ -61,9 +61,10 @@ const SelfLearning2 = () => {
             />
             <Text
               style={{ textAlign: "center", fontWeight: "bold" }}
-              
-            
-              > Age Therapy
+              onPress={() => navigation.navigate("AgeTherapy")}
+            >
+              {" "}
+              Age Therapy
             </Text>
           </View>
         </View>

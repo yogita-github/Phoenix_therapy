@@ -20,7 +20,7 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 db.once("open", () => {
   console.log("Connected to MongoDB");
 });
- b3
+ 
 const userSchema = new mongoose.Schema({
   name: String,
   email: String,
@@ -30,6 +30,7 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model("User", userSchema);
 
 app.use(bodyParser.json());
+
 
 app.post("/register", async (req, res) => {
   const { name, email, password } = req.body;

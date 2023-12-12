@@ -136,7 +136,12 @@ const Profile = () => {
             source={require("../../assets/Timer.png")}
             style={styles.logo}
           />
-          <Text style={styles.menuText}>Timer</Text>
+          <Text
+            style={styles.menuText}
+            onPress={() => navigation.navigate("Timer")}
+          >
+            Timer
+          </Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.menuItem}>
@@ -144,7 +149,12 @@ const Profile = () => {
             source={require("../../assets/todo.png")}
             style={styles.logo}
           />
-          <Text style={styles.menuText}>To do</Text>
+          <Text
+            style={styles.menuText}
+            onPress={() => navigation.navigate("TodoApp")}
+          >
+            To do
+          </Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.menuItem}>
