@@ -15,7 +15,7 @@ import Timer from './screens/components/Timer';
 // import BottomNavigator from './screens/BottomNavigator';
 import Therapy from './screens/components/Therapy';
 import Profile from './screens/components/Profile';
-import Progress from './screens/components/Progress';
+
 import QuizGame from './screens/components/QuizGame';
 import TongueTwister from './screens/components/TongueTwister';
 import ArticulationMaze from './screens/components/ArticulationMaze';
@@ -32,10 +32,10 @@ import LetsStart from "./screens/components/LetsStart";
 import SelfLearning2 from "./screens/components/SelfLearning2"
 import SplashScreen from './screens/components/SplashScreen';
 import Activities from "./screens/components/Activities";
-import MirrorTherapy from './screens/components/MirrorTherapy';
 import PeerInside from './screens/components/PeerInside';
 import VarnamalaPage from './screens/components/VarnamalaPage';
 import WordsPage from "./screens/components/WordsPage";
+import CameraScreen from "./screens/components/CameraScreen"
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 // import MirrorTherapy from "./screens/components/MirrorTherapy";
@@ -73,15 +73,15 @@ const App = () =>{
         <Stack.Screen name="Balloon" component={Balloon} />
         <Stack.Screen name="IntroPage" component={IntroPage} />
         <Stack.Screen name="Register" component={Register} />
+        <Stack.Screen name="CameraScreen" component={CameraScreen}/>
         <Stack.Screen name="Therapy" component={Therapy} />
         <Stack.Screen name="Profile" component={Profile} />
-        <Stack.Screen name="Progress" component={Progress} />
+  
         <Stack.Screen name="QuizGame" component={QuizGame} />
         <Stack.Screen name="TongueTwister" component={TongueTwister} />
         <Stack.Screen name="Sentence" component={Sentence} />
         <Stack.Screen name="Idioms" component={Idioms} />
         <Stack.Screen name="VarnamalaPage" component={VarnamalaPage} />
-        <Stack.Screen name="MirrorTherapy" component={MirrorTherapy} />
         <Stack.Screen name="AgeTherapy" component={AgeTherapy} />
         <Stack.Screen name="Activities" component={Activities} />
         <Stack.Screen name="TodoApp" component={TodoApp} />

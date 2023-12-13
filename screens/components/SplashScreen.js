@@ -19,6 +19,7 @@ const SplashScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+    
       {/* Blue background */}
       <View style={styles.blueContainer}>
         {/* Phonofix Logo centered */}

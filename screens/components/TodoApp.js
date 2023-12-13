@@ -5,7 +5,7 @@ import {
   TextInput,
   TouchableOpacity,
   StyleSheet,
-  ScrollView,
+  ScrollView,Image,
 } from "react-native";
 
 const TodoApp = () => {
@@ -33,6 +33,20 @@ const TodoApp = () => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
+          <Image
+            source={require("../../assets/homeicon.jpeg")}
+            style={{
+              width: 30,
+              height: 30,
+              alignContent: "flex-end",
+              justifyContent: "flex-end",
+              marginLeft: 278,
+            }}
+          />
+        </TouchableOpacity>
+      </View>
       <Text style={styles.title}>Todo Notes</Text>
       <ScrollView style={styles.notesContainer}>
         {notes.map((note, index) => (

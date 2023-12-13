@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet,Image,TouchableOpacity } from "react-native";
 
 const VarnamalaPage = () => {
   const swarData = ["अ", "आ", "इ", "ई", "उ", "ऊ", "ए", "ऐ", "ओ", "औ"];
@@ -54,6 +54,20 @@ const VarnamalaPage = () => {
 
   return (
     <View style={styles.pageContainer}>
+      <View style={styles.header}>
+        <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
+          <Image
+            source={require("../../assets/homeicon.jpeg")}
+            style={{
+              width: 30,
+              height: 30,
+              alignContent: "flex-end",
+              justifyContent: "flex-end",
+              marginLeft: 278,
+            }}
+          />
+        </TouchableOpacity>
+      </View>
       {renderItems(swarData, "Swar")}
       {renderItems(vyanjanData, "Vyanjan")}
     </View>

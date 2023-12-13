@@ -4,6 +4,7 @@ import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 const IntroPage = ({ navigation }) => {
   return (
     <View style={styles.container}>
+      
       <Text style={styles.heading}>PhonoFix</Text>
 
       <Image

@@ -55,6 +55,7 @@ const CollapsibleComponent = ({ title, imageSource, procedure }) => {
 
   return (
     <View style={styles.exerciseContainer}>
+    
       <TouchableOpacity onPress={() => setIsCollapsed(!isCollapsed)}>
         <Text style={styles.exerciseTitle}>{title}</Text>
       </TouchableOpacity>
@@ -68,7 +69,20 @@ const CollapsibleComponent = ({ title, imageSource, procedure }) => {
 };
 
 const LipsExercise = () => {
-  return (
+  return (<><View style={styles.header}>
+        <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
+          <Image
+            source={require("../../assets/homeicon.jpeg")}
+            style={{
+              width: 30,
+              height: 30,
+              alignContent: "flex-end",
+              justifyContent: "flex-end",
+              marginLeft: 278,
+            }}
+          />
+        </TouchableOpacity>
+      </View>
    
       <ScrollView style={styles.container}>
         <Text style={styles.heading}>Lips Exercise</Text>
@@ -104,7 +118,7 @@ Relax and Repeat 5 times."
 3. Relax and Repeat 5 times."
         />
       </ScrollView>
-    
+    </>
   );
 };
 

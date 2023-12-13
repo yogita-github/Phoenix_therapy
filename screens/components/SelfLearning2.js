@@ -1,10 +1,24 @@
-import { StyleSheet, Text, View , Image} from 'react-native'
+import { StyleSheet, Text, View , Image,TouchableOpacity} from 'react-native'
 import React from 'react'
 
 const SelfLearning2 = ({navigation}) => {
   return (
     <>
       <View style={styles.container}>
+        <View style={styles.header}>
+          <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
+            <Image
+              source={require("../../assets/homeicon.jpeg")}
+              style={{
+                width: 30,
+                height: 30,
+                alignContent: "flex-end",
+                justifyContent: "flex-end",
+                marginLeft: 278,
+              }}
+            />
+          </TouchableOpacity>
+        </View>
         <View style={styles.imageContainer}>
           <Image
             source={require("../../assets/selflogo.jpeg")}
@@ -35,7 +49,7 @@ const SelfLearning2 = ({navigation}) => {
             />
             <Text
               style={{ textAlign: "center", fontWeight: "bold" }}
-              onPress={() => navigation.navigate("MirrorTherapy")}
+              onPress={() => navigation.navigate("CameraScreen")}
             >
               {" "}
               Mirror Therapy

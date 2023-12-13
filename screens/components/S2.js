@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet,Image } from 'react-native';
 import { Audio } from 'expo-av';
 
 const S2 = () => {
@@ -28,8 +28,25 @@ const S2 = () => {
 
   const renderStoryItem = (sentence, showButton, audioFile) => (
     <View style={styles.storyContainer}>
+      <View style={styles.header}>
+        <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
+          <Image
+            source={require("../../assets/homeicon.jpeg")}
+            style={{
+              width: 30,
+              height: 30,
+              alignContent: "flex-end",
+              justifyContent: "flex-end",
+              marginLeft: 278,
+            }}
+          />
+        </TouchableOpacity>
+      </View>
       {showButton && (
-        <TouchableOpacity style={styles.playButton} onPress={() => playSound(audioFile)}>
+        <TouchableOpacity
+          style={styles.playButton}
+          onPress={() => playSound(audioFile)}
+        >
           <Text style={styles.playButtonText}>Play</Text>
         </TouchableOpacity>
       )}
@@ -39,7 +56,10 @@ const S2 = () => {
         </Text>
       </View>
       {!showButton && (
-        <TouchableOpacity style={styles.playButton} onPress={() => playSound(audioFile)}>
+        <TouchableOpacity
+          style={styles.playButton}
+          onPress={() => playSound(audioFile)}
+        >
           <Text style={styles.playButtonText}>Play</Text>
         </TouchableOpacity>
       )}

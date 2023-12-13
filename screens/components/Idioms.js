@@ -1,5 +1,5 @@
 import React from "react";
-import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
+import { View, TouchableOpacity, Text, StyleSheet,Image } from "react-native";
 import { Audio } from "expo-av";
 
 const audioFiles = [
@@ -23,6 +23,20 @@ const Idioms = () => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
+          <Image
+            source={require("../../assets/homeicon.jpeg")}
+            style={{
+              width: 30,
+              height: 30,
+              alignContent: "flex-end",
+              justifyContent: "flex-end",
+              marginLeft: 278,
+            }}
+          />
+        </TouchableOpacity>
+      </View>
       {[...Array(5).keys()].map((index) => (
         <TouchableOpacity
           key={index}
@@ -55,8 +69,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#B859E1", 
-
+    backgroundColor: "#F0ADFF",
   },
   button: {
     padding: 15,

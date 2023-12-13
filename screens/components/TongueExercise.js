@@ -57,7 +57,9 @@ const CollapsibleComponent = ({ title, imageSource, procedure }) => {
   const [isCollapsed, setIsCollapsed] = React.useState(true);
 
   return (
+    <>
     <View style={styles.exerciseContainer}>
+    
       <TouchableOpacity onPress={() => setIsCollapsed(!isCollapsed)}>
         <Text style={styles.exerciseTitle}>{title}</Text>
       </TouchableOpacity>
@@ -67,11 +69,25 @@ const CollapsibleComponent = ({ title, imageSource, procedure }) => {
         <Text style={styles.exerciseProcedure}>{procedure}</Text>
       </Collapsible>
     </View>
+    </>
   );
 };
 
 const TongueExercise = () => {
-  return (
+  return (<><View style={styles.header}>
+        <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
+          <Image
+            source={require("../../assets/homeicon.jpeg")}
+            style={{
+              width: 30,
+              height: 30,
+              alignContent: "flex-end",
+              justifyContent: "flex-end",
+              marginLeft: 278,
+            }}
+          />
+        </TouchableOpacity>
+      </View>
     <ScrollView style={styles.container}>
       <Text style={styles.heading}>Tongue Exercise</Text>
 
@@ -119,6 +135,7 @@ const TongueExercise = () => {
 3.Relax and Repeat 5 times."
       />
     </ScrollView>
+    </>
   );
 };
 

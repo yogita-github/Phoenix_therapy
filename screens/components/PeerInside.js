@@ -37,6 +37,20 @@ const PeerInside = () => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
+          <Image
+            source={require("../../assets/homeicon.jpeg")}
+            style={{
+              width: 30,
+              height: 30,
+              alignContent: "flex-end",
+              justifyContent: "flex-end",
+              marginLeft: 278,
+            }}
+          />
+        </TouchableOpacity>
+      </View>
       {/* Yellow box at the top with an image */}
       <View style={styles.yellowBox}>
         <Image
@@ -73,7 +87,7 @@ const PeerInside = () => {
         <CollapseBody>
           {/* Collapsible content, replace with your actual collapsible component */}
           <View style={styles.dropdownContent}>
-            <Text style={styles.fieldLabel}>Address:</Text>
+            <Text style={styles.fieldLabel}> Clinic Address:</Text>
             <Text>
               Infront of Dr. Babasaheb Ambedkar Garden Near Khwajamia
               Dargah,Ganesh Colony,Jalgaon, Maharashtra 425001

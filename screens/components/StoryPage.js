@@ -153,7 +153,7 @@
 
 
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet,Image } from 'react-native';
 
 const StoriesPage = ({navigation}) => {
   const storyNames = [
@@ -169,6 +169,20 @@ const StoriesPage = ({navigation}) => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
+          <Image
+            source={require("../../assets/homeicon.jpeg")}
+            style={{
+              width: 30,
+              height: 30,
+              alignContent: "flex-end",
+              justifyContent: "flex-end",
+              marginLeft: 278,
+            }}
+          />
+        </TouchableOpacity>
+      </View>
       <Text style={styles.heading}>Stories</Text>
       {storyNames.map((name, index) => (
         <View key={index + 1} style={styles.buttonContainer}>

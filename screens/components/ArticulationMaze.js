@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   SafeAreaView,
-  Alert,
+  Alert,Image
 } from "react-native";
 import { Audio } from "expo-av";
 
@@ -85,22 +85,39 @@ const ArticulationMaze = () => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <View style={styles.container}>
-        {cards.map((card) => (
-          <TouchableOpacity
-            key={card.id}
-            style={[styles.card, card.flipped && styles.flippedCard]}
-            onPress={() => handleCardPress(card.id)}
-          >
-            {card.flipped && <Text>{card.value}</Text>}
-          </TouchableOpacity>
-        ))}
+    <>
+      <View style={styles.header}>
+        {/* Home Icon */}
+        <TouchableOpacity onPress={() => navigation.navigate("HomeSide")}>
+          <Image
+            source={require("../../assets/homeicon.jpeg")}
+            style={{
+              width: 30,
+              height: 30,
+              alignContent: "flex-end",
+              justifyContent: "flex-end",
+              marginLeft: 278,
+            }}
+          />
+        </TouchableOpacity>
       </View>
-      <View style={styles.scoreContainer}>
-        <Text style={styles.scoreText}>Score: {score}</Text>
-      </View>
-    </SafeAreaView>
+      <SafeAreaView style={{ flex: 1 }}>
+        <View style={styles.container}>
+          {cards.map((card) => (
+            <TouchableOpacity
+              key={card.id}
+              style={[styles.card, card.flipped && styles.flippedCard]}
+              onPress={() => handleCardPress(card.id)}
+            >
+              {card.flipped && <Text>{card.value}</Text>}
+            </TouchableOpacity>
+          ))}
+        </View>
+        <View style={styles.scoreContainer}>
+          <Text style={styles.scoreText}>Score: {score}</Text>
+        </View>
+      </SafeAreaView>
+    </>
   );
 };
 

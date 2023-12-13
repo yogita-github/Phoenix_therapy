@@ -9,6 +9,21 @@ const Exercise = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        {/* Home Icon */}
+        <TouchableOpacity onPress={() => navigation.navigate("HomeSide")}>
+          <Image
+            source={require("../../assets/homeicon.jpeg")}
+            style={{
+              width: 30,
+              height: 30,
+              alignContent: "flex-end",
+              justifyContent: "flex-end",
+              marginLeft: 278,
+            }}
+          />
+        </TouchableOpacity>
+      </View>
       <View style={styles.exerciseContainer}>
         <Image
           source={require("../../assets/exerciselogo.jpeg")}

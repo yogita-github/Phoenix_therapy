@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, Image, StyleSheet, Picker } from "react-native";
+import { View, Text,TouchableOpacity, Image, StyleSheet, Picker } from "react-native";
 
 const AgeTherapy = () => {
   const [selectedAgeCategory, setSelectedAgeCategory] = useState("small");
@@ -46,6 +46,22 @@ const AgeTherapy = () => {
 
   return (
     <View style={styles.container}>
+    
+      <View style={styles.header}>
+        {/* Home Icon */}
+        <TouchableOpacity onPress={() => navigation.navigate("HomeSide")}>
+          <Image
+            source={require("../../assets/homeicon.jpeg")}
+            style={{
+              width: 30,
+              height: 30,
+              alignContent: "flex-end",
+              justifyContent: "flex-end",
+              marginLeft: 278,
+            }}
+          />
+        </TouchableOpacity>
+      </View>
       <View style={styles.dropdownContainer}>
         <Picker
           selectedValue={selectedAgeCategory}

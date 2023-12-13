@@ -1,11 +1,26 @@
 // Import necessary React Native components
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity,Image } from 'react-native';
 
 // Function to create the Activity Page
 const Activities = ({navigation}) => {
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        {/* Home Icon */}
+        <TouchableOpacity onPress={() => navigation.navigate("HomeSide")}>
+          <Image
+            source={require("../../assets/homeicon.jpeg")}
+            style={{
+              width: 30,
+              height: 30,
+              alignContent: "flex-end",
+              justifyContent: "flex-end",
+              marginLeft: 278,
+            }}
+          />
+        </TouchableOpacity>
+      </View>
       <Text style={styles.heading}> Activities</Text>
 
       <TouchableOpacity
@@ -26,7 +41,7 @@ const Activities = ({navigation}) => {
           style={styles.buttonText}
           onPress={() => navigation.navigate("WordsPage")}
         >
-        Words
+          Words
         </Text>
       </TouchableOpacity>
 
@@ -55,11 +70,6 @@ const Activities = ({navigation}) => {
         >
           Stories
         </Text>
-      </TouchableOpacity>
-
-      {/* New Button */}
-      <TouchableOpacity style={styles.activityButton} activeOpacity={0.7}>
-        <Text style={styles.buttonText}>जबरदस्त टंग ट्विस्टर</Text>
       </TouchableOpacity>
     </View>
   );

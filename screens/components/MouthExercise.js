@@ -68,6 +68,20 @@ const CollapsibleComponent = ({ title, imageSource, procedure }) => {
 
 const MouthExercise = () => {
   return (
+    <><View style={styles.header}>
+        <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
+          <Image
+            source={require("../../assets/homeicon.jpeg")}
+            style={{
+              width: 30,
+              height: 30,
+              alignContent: "flex-end",
+              justifyContent: "flex-end",
+              marginLeft: 278,
+            }}
+          />
+        </TouchableOpacity>
+      </View>
     <ScrollView style={styles.container}>
       <Text style={styles.heading}>Mouth Exercise</Text>
       <CollapsibleComponent
@@ -109,6 +123,7 @@ Multisensory Input makes learning speech sounds more effective. When teaching so
 Speech clarity can be compromised if the individual prefers to speak with limited mouth opening. In such situations, if we try to speak in an exaggerated manner (speaking with an open mouth and enunciating each sound correctly), speech clarity will be improved."
       />
     </ScrollView>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 // screens/ButtonPage.js
 import React from 'react';
-import { View, ScrollView, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { View, ScrollView, TouchableOpacity, Text, StyleSheet,Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import videos from '../videos.json';
 
@@ -42,6 +42,20 @@ const ButtonPage = () => {
   }
 
   return (
+    <><View style={styles.header}>
+        <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
+          <Image
+            source={require("../assets/homeicon.jpeg")}
+            style={{
+              width: 30,
+              height: 30,
+              alignContent: "flex-end",
+              justifyContent: "flex-end",
+              marginLeft: 278,
+            }}
+          />
+        </TouchableOpacity>
+      </View>
     <ScrollView contentContainerStyle={styles.scrollContainer}>
       <View style={styles.container}>
         <Text style={styles.headline}>Vowels</Text>
@@ -59,6 +73,7 @@ const ButtonPage = () => {
         })}
       </View>
     </ScrollView>
+    </>
   );
 };
 

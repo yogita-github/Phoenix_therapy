@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet,Image,TouchableOpacity } from "react-native";
 
 const WordsPage = () => {
   const hindiWords = [
@@ -19,6 +19,20 @@ const WordsPage = () => {
 
   return (
     <View style={styles.pageContainer}>
+      <View style={styles.header}>
+        <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
+          <Image
+            source={require("../../assets/homeicon.jpeg")}
+            style={{
+              width: 30,
+              height: 30,
+              alignContent: "flex-end",
+              justifyContent: "flex-end",
+              marginLeft: 278,
+            }}
+          />
+        </TouchableOpacity>
+      </View>
       <View style={styles.headerContainer}>
         <Text style={styles.headerText}>Recite Loudly</Text>
       </View>

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image, Text, StyleSheet } from "react-native";
+import { View, Image, Text, StyleSheet,TouchableOpacity } from "react-native";
 
 
 const Games = ({navigation}) => {
@@ -7,6 +7,21 @@ const Games = ({navigation}) => {
   return (
     <>
       <View style={styles.container}>
+        <View style={styles.header}>
+          <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
+            <Image
+              source={require("../../assets/homeicon.jpeg")}
+              style={{
+                width: 30,
+                height: 30,
+                  alignContent:"flex-end",
+                  justifyContent: "flex-end",
+                marginLeft:278,
+                
+              }}
+            />
+          </TouchableOpacity>
+        </View>
         <View style={styles.imageContainer}>
           <Image
             source={{

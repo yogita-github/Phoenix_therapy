@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View , TouchableOpacity} from 'react-native'
+import { StyleSheet, Text, View , TouchableOpacity,Image} from 'react-native'
 import React from 'react'
 
 const LettersPage = () => {
@@ -23,6 +23,20 @@ const LettersPage = () => {
   };
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
+          <Image
+            source={require("../../assets/homeicon.jpeg")}
+            style={{
+              width: 30,
+              height: 30,
+              alignContent: "flex-end",
+              justifyContent: "flex-end",
+              marginLeft: 278,
+            }}
+          />
+        </TouchableOpacity>
+      </View>
       <View style={styles.vowelContainer}>
         <Text style={styles.sectionTitle}>Vowels</Text>
         <View style={styles.buttonsGrid}>{renderCircleButtons(vowels)}</View>
@@ -30,7 +44,9 @@ const LettersPage = () => {
 
       <View style={styles.consonantContainer}>
         <Text style={styles.sectionTitle}>Consonants</Text>
-        <View style={styles.buttonsGrid}>{renderCircleButtons(consonants)}</View>
+        <View style={styles.buttonsGrid}>
+          {renderCircleButtons(consonants)}
+        </View>
       </View>
     </View>
   );
