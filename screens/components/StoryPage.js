@@ -153,7 +153,7 @@
 
 
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet,Image } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet,Image, ScrollView } from 'react-native';
 
 const StoriesPage = ({navigation}) => {
   const storyNames = [
@@ -168,6 +168,7 @@ const StoriesPage = ({navigation}) => {
   ];
 
   return (
+    <ScrollView>
     <View style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
@@ -203,6 +204,7 @@ const StoriesPage = ({navigation}) => {
         </View>
       ))}
     </View>
+    </ScrollView>
   );
 };
 

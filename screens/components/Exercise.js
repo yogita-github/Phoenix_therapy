@@ -98,7 +98,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#FBB718",
   },
   heading: {
-    fontStyle: "bold",
+    fontStyle: "normal",
+    fontWeight: "bold",
     fontSize: 20,
     marginBottom: 30,
     textAlign: "center",

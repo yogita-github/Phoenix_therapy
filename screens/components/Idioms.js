@@ -1,6 +1,7 @@
 import React from "react";
-import { View, TouchableOpacity, Text, StyleSheet,Image } from "react-native";
+import { View, TouchableOpacity, Text, StyleSheet, Image } from "react-native";
 import { Audio } from "expo-av";
+import { useNavigation } from "@react-navigation/native"; // Add this line
 
 const audioFiles = [
   require("../../assets/audio/I-1.wav"),
@@ -8,10 +9,11 @@ const audioFiles = [
   require("../../assets/audio/I-3.wav"),
   require("../../assets/audio/I-4.wav"),
   require("../../assets/audio/I-5.wav"),
-  
 ];
 
 const Idioms = () => {
+  const navigation = useNavigation(); // Add this line
+
   const playAudio = async (audioIndex) => {
     try {
       const { sound } = await Audio.Sound.createAsync(audioFiles[audioIndex]);
@@ -81,7 +83,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "white",
     fontSize: 16,
-    fontWeight: 600,
+    fontWeight: "600", // Corrected fontWeight value
   },
 });
 

@@ -1,70 +1,36 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet,Image } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { Audio } from 'expo-av';
 
 const S2 = () => {
   const [sound, setSound] = useState();
 
-  const playSound = async (audioFile) => {
+  useEffect(() => {
+    return sound
+      ? () => {
+          sound.unloadAsync();
+        }
+      : undefined;
+  }, [sound]);
+
+  const audioFiles = {
+    S2_1: require('../../assets/S2_1.wav'),
+    S2_2: require('../../assets/S2_2.wav'),
+    S2_3: require('../../assets/S2_3.wav'),
+    S2_4: require('../../assets/S2_4.wav'),
+    S2_5: require('../../assets/S2_5.wav'),
+    // Add more entries as needed
+  };
+
+  const playSound = async (audioKey) => {
     try {
-      const { sound } = await Audio.Sound.createAsync(
-        require(`../../assets/${audioFile}`) // Adjust the path accordingly
-      );
+      const { sound } = await Audio.Sound.createAsync(audioFiles[audioKey]);
       setSound(sound);
       await sound.playAsync();
     } catch (error) {
       console.error('Error loading sound', error);
     }
   };
-
-  const playAll = async () => {
-    for (let i = 1; i <= storyData.length; i++) {
-      const audioFile = `S2_${i}.wav`;
-      await playSound(audioFile);
-      // Optionally, add a delay between sentences
-      await new Promise(resolve => setTimeout(resolve, 1000));
-    }
-  };
-
-  const renderStoryItem = (sentence, showButton, audioFile) => (
-    <View style={styles.storyContainer}>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
-          <Image
-            source={require("../../assets/homeicon.jpeg")}
-            style={{
-              width: 30,
-              height: 30,
-              alignContent: "flex-end",
-              justifyContent: "flex-end",
-              marginLeft: 278,
-            }}
-          />
-        </TouchableOpacity>
-      </View>
-      {showButton && (
-        <TouchableOpacity
-          style={styles.playButton}
-          onPress={() => playSound(audioFile)}
-        >
-          <Text style={styles.playButtonText}>Play</Text>
-        </TouchableOpacity>
-      )}
-      <View style={styles.sentenceBox}>
-        <Text style={styles.sentence} numberOfLines={5}>
-          {sentence}
-        </Text>
-      </View>
-      {!showButton && (
-        <TouchableOpacity
-          style={styles.playButton}
-          onPress={() => playSound(audioFile)}
-        >
-          <Text style={styles.playButtonText}>Play</Text>
-        </TouchableOpacity>
-      )}
-    </View>
-  );
 
   const storyData = [
     'एक बार एक शेर सो रहा होता है और एक चूहा उसके ऊपर चढ़ के उसकी नींद को भटका देता है।',
@@ -78,12 +44,19 @@ const S2 = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Stories</Text>
-      <TouchableOpacity style={styles.playAllButton} onPress={playAll}>
-        <Text style={styles.playAllButtonText}>Play All</Text>
-      </TouchableOpacity>
       {storyData.map((sentence, index) => (
         <View key={index} style={index % 2 === 0 ? styles.storyContainer : styles.reverseStoryContainer}>
-          {renderStoryItem(sentence, index % 2 === 0, `S2_${index + 1}.wav`)}
+          <TouchableOpacity
+            style={styles.playButton}
+            onPress={() => playSound(`S2_${index + 1}`)}
+          >
+            <Text style={styles.playButtonText}>Play</Text>
+          </TouchableOpacity>
+          <View style={styles.sentenceBox}>
+            <Text style={styles.sentence} numberOfLines={5}>
+              {sentence}
+            </Text>
+          </View>
         </View>
       ))}
     </View>
@@ -91,73 +64,60 @@ const S2 = () => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      },
-      heading: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 10,
-      },
-      storyContainer: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginBottom: 10,
-      },
-      reverseStoryContainer: {
-        flexDirection: 'row-reverse',
-        alignItems: 'center',
-        marginBottom: 10,
-      },
-      sentenceBox: {
-        flex: 1,
-        borderWidth: 2,
-        borderColor: 'green', // Change to your preferred shade of green
-        borderRadius: 8,
-        padding: 10,
-        marginLeft: 10,
-        backgroundColor: 'lightgreen', // Change to your preferred shade of green
-        shadowColor: 'yellow',
-        shadowOffset: {
-          width: 0,
-          height: 2,
-        },
-        shadowOpacity: 0.8,
-        shadowRadius: 4,
-        elevation: 5,
-      },
-      sentence: {
-        fontSize: 16,
-        textAlign: 'justify', // Align text to justify
-      },
-      playButton: {
-        width: 80,
-        height: 80,
-        borderRadius: 40,
-        backgroundColor: 'green', // Change to your preferred shade of green
-        justifyContent: 'center',
-        alignItems: 'center',
-      },
-      playButtonText: {
-        color: 'white',
-        fontSize: 18,
-        fontWeight: 'bold',
-      },
-      playAllButton: {
-        marginBottom: 10,
-        padding: 10,
-        backgroundColor: 'darkgreen', // Change to your preferred shade of green
-        borderRadius: 8,
-        justifyContent: 'center',
-        alignItems: 'center',
-      },
-      playAllButtonText: {
-        color: 'white',
-        fontSize: 18,
-        fontWeight: 'bold',
-      }, 
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  heading: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  storyContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+  reverseStoryContainer: {
+    flexDirection: 'row-reverse',
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+  sentenceBox: {
+    flex: 1,
+    borderWidth: 2,
+    borderColor: 'green',
+    borderRadius: 8,
+    padding: 10,
+    marginLeft: 10,
+    backgroundColor: 'lightgreen',
+    shadowColor: 'yellow',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.8,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  sentence: {
+    fontSize: 16,
+    textAlign: 'justify',
+  },
+  playButton: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    backgroundColor: 'green',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  playButtonText: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
 });
 
 export default S2;

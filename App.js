@@ -7,6 +7,7 @@ import HomeSide from './screens/components/Home_inside';
 import Balloon from './screens/components/Balloon';
 import IntroPage from './screens/components/IntroPage';
 import Register from './screens/components/Register';
+import LoginScreen from './screens/LoginScreen';
 import Testing from './screens/Testing';
 import StoryPage from './screens/components/StoryPage';
 import S2 from "./screens/components/S2";
@@ -27,9 +28,12 @@ import LipsExercise from './screens/components/LipsExercise';
 import MouthExercise from './screens/components/MouthExercise';
 import TongueExercise from './screens/components/TongueExercise';
 import Exercise from "./screens/components/Exercise";
+
 import LettersPage from "./screens/LettersPage";
 // import ButtonPage from './screens/ButtonPage';
 // import VideoPage from './screens/VideoPage';
+
+
 import LetsStart from "./screens/components/LetsStart";
 import SelfLearning2 from "./screens/components/SelfLearning2"
 import SplashScreen from './screens/components/SplashScreen';
@@ -37,9 +41,17 @@ import Activities from "./screens/components/Activities";
 import PeerInside from './screens/components/PeerInside';
 import VarnamalaPage from './screens/components/VarnamalaPage';
 import WordsPage from "./screens/components/WordsPage";
+
 import CameraScreen from "./screens/components/CameraScreen"
 import HomeScreen from './screens/HomeScreen';
 // import { createDrawerNavigator } from '@react-navigation/drawer';
+
+import CameraScreen from "./screens/components/CameraScreen";
+import LettersPage from './screens/LettersPage';
+import LetterDetail from './screens/LetterDetail';
+import HomeScreen from './screens/HomeScreen';
+
+
 
 // import MirrorTherapy from "./screens/components/MirrorTherapy";
 
@@ -68,14 +80,20 @@ const App = () =>{
           {/* Add other screens or stacks as needed */}
       {/* </Drawer.Navigator> */}
 
+
       <Stack.Navigator initialRouteName="HomeScreen">
         <Stack.Screen name="HomeScreen" component={HomeScreen}/>
+
+      <Stack.Navigator>
+      <Stack.Screen name="IntroPage" component={IntroPage} />
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
+
         <Stack.Screen name="Test" component={Testing} />
         <Stack.Screen name="Games" component={Games} />
         <Stack.Screen name="PeerInside" component={PeerInside} />
         <Stack.Screen name="HomeSide" component={HomeSide} />
         <Stack.Screen name="Balloon" component={Balloon} />
-        <Stack.Screen name="IntroPage" component={IntroPage} />
         <Stack.Screen name="Register" component={Register} />
         <Stack.Screen name="CameraScreen" component={CameraScreen} />
         <Stack.Screen name="Therapy" component={Therapy} />
@@ -98,13 +116,19 @@ const App = () =>{
         <Stack.Screen name="TongueExercise" component={TongueExercise} />
         <Stack.Screen name="MouthExercise" component={MouthExercise} />
         <Stack.Screen name="Exercise" component={Exercise} />
+
         {/* <Stack.Screen name="ButtonPage" component={ButtonPage} /> */}
         {/* <Stack.Screen name="VideoPage" component={VideoPage} /> */}
+
+
         <Stack.Screen name="LetsStart" component={LetsStart} />
         <Stack.Screen name="SelfLearning2" component={SelfLearning2} />
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="StoryPage" component={StoryPage} />
         <Stack.Screen name="S2" component={S2} />
+
+        <Stack.Screen name="LettersPage" component={LettersPage} />
+      <Stack.Screen name="LetterDetail" component={LetterDetail} />
       </Stack.Navigator>
     </NavigationContainer>
   );

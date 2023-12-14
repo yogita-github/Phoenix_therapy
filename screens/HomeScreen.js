@@ -1,11 +1,12 @@
 // HomeScreen.js
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, ScrollView } from 'react-native';
 
 const HomeScreen = ({ navigation }) => (
+  <ScrollView>
   <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
     <Text>Home Screen</Text>
-
+    <Button title="LettersPage" onPress={() => navigation.navigate("LettersPage")} />
     <Button title="Games" onPress={() => navigation.navigate("Games")} />
     <Button title="HomeSide" onPress={() => navigation.navigate("HomeSide")} />
     <Button title="Balloon" onPress={() => navigation.navigate("Balloon")} />
@@ -13,11 +14,15 @@ const HomeScreen = ({ navigation }) => (
     <Button title="Test" onPress={() => navigation.navigate("Test")} />
     <Button title="Therapy" onPress={() => navigation.navigate("Therapy")} />
     <Button title="Profile" onPress={() => navigation.navigate("Profile")} />
+
     <Button
       title="PeerInside"
       onPress={() => navigation.navigate("PeerInside")}
     />
     <Button title="Progress" onPress={() => navigation.navigate("Progress")} />
+
+    <Button title="PeerInside" onPress={() => navigation.navigate("PeerInside")} />
+
     <Button title="QuizGame" onPress={() => navigation.navigate("QuizGame")} />
     <Button title="Sentence" onPress={() => navigation.navigate("Sentence")} />
     <Button
@@ -51,14 +56,6 @@ const HomeScreen = ({ navigation }) => (
       onPress={() => navigation.navigate("SplashScreen")}
     />
     <Button
-      title="ButtonPage"
-      onPress={() => navigation.navigate("ButtonPage")}
-    />
-    <Button
-      title="VideoPage"
-      onPress={() => navigation.navigate("VideoPage")}
-    />
-    <Button
       title="LipsExercise"
       onPress={() => navigation.navigate("LipsExercise")}
     />
@@ -88,6 +85,7 @@ const HomeScreen = ({ navigation }) => (
       onPress={() => navigation.navigate("IntroPage")}
     />
   </View>
+  </ScrollView>
 );
 
 export default HomeScreen;

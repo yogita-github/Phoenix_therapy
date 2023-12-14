@@ -1,7 +1,7 @@
-import { StyleSheet, Text, View , Image,TouchableOpacity} from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const SelfLearning2 = ({navigation}) => {
+const SelfLearning2 = ({ navigation }) => {
   return (
     <>
       <View style={styles.container}>
@@ -41,10 +41,11 @@ const SelfLearning2 = ({navigation}) => {
             <Image
               source={require("../../assets/Mirrorlogo.jpeg")}
               style={{
-                width: "100%",
+                width: "60%",
                 height: 100,
                 borderRadius: 7,
                 marginBottom: 10,
+                alignSelf:'center'
               }}
             />
             <Text
@@ -87,31 +88,32 @@ const SelfLearning2 = ({navigation}) => {
   );
 }
 
-export default SelfLearning2
+export default SelfLearning2;
 
 const styles = StyleSheet.create({
-    container: {
-        padding: 100,
-        alignItems: "center",
-        backgroundColor: "#FFFBEF",
-        
-        
-      },
-      imageContainer: {
-        width: 200,
-        height: 150,
-        borderRadius: 5,
-        overflow: "hidden",
-      },
-      image: {
-        width: "100%",
-        height: "100%",
-        resizeMode: "cover",
-        
-      },
-      heading: {
-        fontSize: 18,
-        fontWeight: "bold",
-        marginTop:100,
-      },
-})
+  container: {
+    flex: 1, // Use flex: 1 to make the container take the full height
+    justifyContent: "flex-start", // Align items from the top
+    alignItems: "center",
+    paddingTop: 50, // Adjust top padding to create space from the top
+    backgroundColor: "#FFFBEF",
+  },
+  imageContainer: {
+    width: 200,
+    height: 150,
+    borderRadius: 5,
+    overflow: "hidden",
+    marginBottom: 20,
+  },
+  image: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover",
+  },
+  heading: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginTop: 20,
+    marginBottom: 20,
+  },
+});

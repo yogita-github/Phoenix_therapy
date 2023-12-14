@@ -1,6 +1,7 @@
 import React from "react";
-import { View, TouchableOpacity, Text, StyleSheet ,Image} from "react-native";
+import { View, TouchableOpacity, Text, StyleSheet, Image } from "react-native";
 import { Audio } from "expo-av";
+import { useNavigation } from '@react-navigation/native';
 
 const audioFiles = [
   require("../../assets/audio/S1.wav"),
@@ -14,6 +15,8 @@ const audioFiles = [
 ];
 
 const Sentence = () => {
+  const navigation = useNavigation();
+
   const playAudio = async (audioIndex) => {
     try {
       const { sound } = await Audio.Sound.createAsync(audioFiles[audioIndex]);
@@ -83,7 +86,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "white",
     fontSize: 16,
-    fontWeight:600,
+    fontWeight: '600', // or remove this line
   },
 });
 
