@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Data</title>
+</head>
+<body>
+
+  <h1>Upload Data</h1>
+
+  <form id="uploadForm">
+    <label for="letter">Letter:</label>
+    <input type="text" id="letter" name="letter" required>
+
+    <label for="image">Image:</label>
+    <input type="file" id="image" name="image" accept="image/*">
+
+    <label for="video">Video:</label>
+    <input type="file" id="video" name="video" accept="video/*" >
+
+    <label for="sentences">Sentences (separated by newline):</label>
+    <textarea id="sentences" name="sentences" rows="4" ></textarea>
+
+    <label for="words">Words (comma-separated):</label>
+    <input type="text" id="words2" name="words2">
+
+    <label for="barakhadi">barakhadi (comma-separated):</label>
+    <input type="text" id="words" name="words" >
+
+    <label for="audio">Audio:</label>
+    <input type="file" id="audio" name="audio" accept="audio/*" multiple >
+
+    <button type="button" onclick="uploadData()">Upload</button>
+  </form>
+
+  <script>
+    function uploadData() {
+      const form = document.getElementById('uploadForm');
+      const formData = new FormData(form);
+
+      fetch('http://localhost:1000/save_data', {
+        method: 'POST',
+        body: formData,
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert(data.message);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while uploading data.');
+      });
+    }
+  </script>
+
+</body>
+</html>
