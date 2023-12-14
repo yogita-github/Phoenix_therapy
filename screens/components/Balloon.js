@@ -10,9 +10,9 @@ const wordData = [
     audio: require("../../assets/audio/kutta.m4a"),
   },
   {
-    word: "शुभ रात्रि",
+    word: "शुभरात्रि",
     image: require("../../assets/night-3115977_640.jpg"),
-    audio: require("../../assets/audio/शुभ रात्रि.m4a"),
+    audio: require("../../assets/audio/शुभरात्रि.m4a"),
   },
   {
     word: "संतरा",

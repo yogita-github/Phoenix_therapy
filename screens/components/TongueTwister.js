@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import { View, Text, TouchableOpacity, StyleSheet,Image } from "react-native";
+import React, { useState, useEffect } from "react";
+import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import { Audio } from "expo-av";
 
 const audioFiles = [
-  require("../../assets/audio/TT1 (1).wav"),
-  require("../../assets/audio/TT2 (1).wav"),
-  require("../../assets/audio/TT3 (1).wav"),
-  require("../../assets/audio/TT4 (1).wav"),
-  require("../../assets/audio/TT5 (1).wav"),
-  require("../../assets/audio/TT6 (1).wav"),
-  require("../../assets/audio/TT7 (1).wav"),
-  require("../../assets/audio/TT8 (1).wav"),
+  require("../../assets/audio/TT1.wav"),
+  require("../../assets/audio/TT2.wav"),
+  require("../../assets/audio/TT3.wav"),
+  require("../../assets/audio/TT4.wav"),
+  require("../../assets/audio/TT5.wav"),
+  require("../../assets/audio/TT6.wav"),
+  require("../../assets/audio/TT7.wav"),
+  require("../../assets/audio/TT8.wav"),
 ];
 
 const phrases = [
-  "Believe you can and you’re halfway there.”",
+  "Believe you can and you’re halfway there.",
   "Enhance your speech clarity!",
   "Practice speaking faster!",
   "Perfect your speech rhythm!",
@@ -25,10 +25,19 @@ const phrases = [
 ];
 
 const TongueTwister = () => {
-  const [isPlaying, setIsPlaying] = useState(
-    Array(audioFiles.length).fill(false)
-  );
+  const [isPlaying, setIsPlaying] = useState(Array(audioFiles.length).fill(false));
   const [sounds, setSounds] = useState(Array(audioFiles.length).fill(null));
+
+  useEffect(() => {
+    return () => {
+      // Unload sounds when the component unmounts
+      sounds.forEach(async (sound) => {
+        if (sound) {
+          await sound.unloadAsync();
+        }
+      });
+    };
+  }, []);
 
   const playAudio = async (audioIndex) => {
     try {

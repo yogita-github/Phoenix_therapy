@@ -67,8 +67,8 @@ const App = () =>{
           {/* Add other screens or stacks as needed */}
       {/* </Drawer.Navigator> */}
 
-      <Stack.Navigator>
-      <Stack.Screen name="IntroPage" component={IntroPage} />
+      <Stack.Navigator initialRouteName="IntroPage">
+      <Stack.Screen name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Test" component={Testing} />
@@ -76,6 +76,7 @@ const App = () =>{
         <Stack.Screen name="PeerInside" component={PeerInside} />
         <Stack.Screen name="HomeSide" component={HomeSide} />
         <Stack.Screen name="Balloon" component={Balloon} />
+        <Stack.Screen name="IntroPage" component={IntroPage} />
         <Stack.Screen name="Register" component={Register} />
         <Stack.Screen name="CameraScreen" component={CameraScreen}/>
         <Stack.Screen name="Therapy" component={Therapy} />
@@ -99,7 +100,7 @@ const App = () =>{
         <Stack.Screen name="Exercise" component={Exercise} />
         <Stack.Screen name="LetsStart" component={LetsStart} />
         <Stack.Screen name="SelfLearning2" component={SelfLearning2} />
-        <Stack.Screen name="SplashScreen" component={SplashScreen} />
+        
         <Stack.Screen name="StoryPage" component={StoryPage} />
         <Stack.Screen name="S2" component={S2} />
 
