@@ -37,7 +37,7 @@ const LoginScreen = ({ navigation }) => {
         console.log("Login successful:", result);
         await SecureStore.setItemAsync("token", result.token);
 
-        navigation.navigate("Home");
+        navigation.navigate("LetsStart");
       } else {
         console.error("Login failed:", response.status);
         alert("Login failed. Please check your credentials.");

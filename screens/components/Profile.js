@@ -1,7 +1,16 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
+import * as SecureStore from 'expo-secure-store';
 
 const Profile = ({navigation}) => {
+  const handleLogout = async () => {
+    // Clear the token from SecureStore
+    await SecureStore.deleteItemAsync('token');
+
+    // Navigate back to the LoginScreen
+    navigation.navigate('Login');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.menuContainer}>
@@ -67,7 +76,7 @@ const Profile = ({navigation}) => {
           <Text style={styles.menuText}>Settings</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.menuItem}>
+        <TouchableOpacity style={styles.menuItem} onPress={handleLogout}>
           <Image
             source={require("../../assets/logout.png")}
             style={styles.logo}

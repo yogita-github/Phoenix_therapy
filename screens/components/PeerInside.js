@@ -1,41 +1,38 @@
 import React, { useState } from "react";
+import { useNavigation } from '@react-navigation/native';
 import {
   View,
   Text,
   Image,
   StyleSheet,
   TouchableOpacity,
-  Linking,
+  ScrollView,
 } from "react-native";
-import Collapsible from "react-native-collapsible";
-import {
-  Collapse,
-  CollapseHeader,
-  CollapseBody,
-} from "accordion-collapse-react-native";
+import { WebBrowser } from 'expo';
 
 const PeerInside = () => {
+  const navigation = useNavigation();
+
   const [isCollapsed, setCollapsed] = useState(true);
 
-  
   // Define the drive link
   const driveLink =
     "https://drive.google.com/file/d/1LzJWk387DthQ9r_0pS9o6YfohDUHf6fI/view?usp=drive_link";
 
-     const AppointmentForm =
-       "https://docs.google.com/forms/d/e/1FAIpQLSeD3SqCezrTy-4K-7nUeTH62EXELIhTuQgw4sUhpkoyynESDQ/viewform";
+  const AppointmentForm =
+    "https://docs.google.com/forms/d/e/1FAIpQLSeD3SqCezrTy-4K-7nUeTH62EXELIhTuQgw4sUhpkoyynESDQ/viewform";
 
   // Handle certification button press
-  const handleCertificationButton = () => {
-    // Open the driveLink in the default browser
-    Linking.openURL(driveLink);
+  const handleCertificationButton = async () => {
+    await WebBrowser.openBrowserAsync(driveLink);
   };
-  const handleAppointmentButton = () => {
-    // Open the driveLink in the default browser
-    Linking.openURL(AppointmentForm);
+
+  const handleAppointmentButton = async () => {
+    await WebBrowser.openBrowserAsync(AppointmentForm);
   };
 
   return (
+    <ScrollView>
     <View style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
@@ -63,43 +60,39 @@ const PeerInside = () => {
       <Text style={styles.heading}>Certified Therapist</Text>
 
       {/* Light grey box with an image, name, and collapsible */}
-      <Collapse
-        isCollapsed={isCollapsed}
-        onToggle={() => setCollapsed(!isCollapsed)}
+      <TouchableOpacity
+        style={styles.greyBoxHeader}
+        onPress={() => setCollapsed(!isCollapsed)}
       >
-        <CollapseHeader>
-          <View style={styles.greyBoxHeader}>
-            {/* Left side with an image */}
-            <Image
-              source={require("../../assets/RajshriMam.png")}
-              style={styles.image}
-            />
+        {/* Left side with an image */}
+        <Image
+          source={require("../../assets/RajshriMam.png")}
+          style={styles.image}
+        />
 
-            {/* Right side with name */}
-            <View style={styles.textContainer}>
-              <Text style={[styles.name, styles.underline]}>
-                Ms. Rajshri Shantaram Wagh
-              </Text>
-              <Text style={styles.name1}>Speech Therapist</Text>
-            </View>
-          </View>
-        </CollapseHeader>
-        <CollapseBody>
-          {/* Collapsible content, replace with your actual collapsible component */}
-          <View style={styles.dropdownContent}>
-            <Text style={styles.fieldLabel}> Clinic Address:</Text>
-            <Text>
-              Infront of Dr. Babasaheb Ambedkar Garden Near Khwajamia
-              Dargah,Ganesh Colony,Jalgaon, Maharashtra 425001
-            </Text>
-            <Text style={styles.fieldLabel}>Contact:</Text>
-            <Text>Phone: +91 9096769868</Text>
-          </View>
-        </CollapseBody>
-      </Collapse>
+        {/* Right side with name */}
+        <View style={styles.textContainer}>
+          <Text style={[styles.name, styles.underline]}>
+            Ms. Rajshri Shantaram Wagh
+          </Text>
+          <Text style={styles.name1}>Speech Therapist</Text>
+        </View>
+      </TouchableOpacity>
+
+      {/* Collapsible content, replace with your actual collapsible component */}
+      {!isCollapsed && (
+        <View style={styles.dropdownContent}>
+          <Text style={styles.fieldLabel}> Clinic Address:</Text>
+          <Text>
+            Infront of Dr. Babasaheb Ambedkar Garden Near Khwajamia
+            Dargah,Ganesh Colony,Jalgaon, Maharashtra 425001
+          </Text>
+          <Text style={styles.fieldLabel}>Contact:</Text>
+          <Text>Phone: +91 9096769868</Text>
+        </View>
+      )}
 
       {/* Certification button */}
-
       <TouchableOpacity
         style={styles.certificationButton}
         onPress={handleCertificationButton}
@@ -115,6 +108,7 @@ const PeerInside = () => {
         <Text style={styles.buttonText}>AppointmentForm</Text>
       </TouchableOpacity>
     </View>
+    </ScrollView>
   );
 };
 
@@ -141,12 +135,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginTop: 20,
     marginBottom: 10,
-    fontWeight: 700,
+    fontWeight: "700",
     textAlign: "center",
   },
   greyBoxHeader: {
     backgroundColor: "#D3D3D3",
-    // borderRadius: 20,
     padding: 20,
     flexDirection: "row",
     alignItems: "center",
@@ -168,7 +161,7 @@ const styles = StyleSheet.create({
     textDecorationLine: "underline",
   },
   name1: {
-    fontWeight: 400,
+    fontWeight: "400",
   },
   certificationButton: {
     backgroundColor: "#3498db",
@@ -189,11 +182,9 @@ const styles = StyleSheet.create({
     marginTop: 10,
     alignItems: "center",
   },
-  
   dropdownContent: {
     backgroundColor: "#D3D3D3",
     padding: 10,
-    // borderRadius: 10,
   },
   fieldLabel: {
     fontWeight: "bold",

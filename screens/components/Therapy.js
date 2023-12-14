@@ -1,8 +1,7 @@
 // source={require("../../assets/Omission.png")}
 
-
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
 
 const Therapy = ({ navigation }) => {
   const handleContinue = () => {
@@ -12,6 +11,7 @@ const Therapy = ({ navigation }) => {
   };
 
   return (
+    <ScrollView>
     <View style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
@@ -93,6 +93,7 @@ const Therapy = ({ navigation }) => {
         <Text style={styles.buttonText}>Continue</Text>
       </TouchableOpacity>
     </View>
+    </ScrollView>
   );
 };
 
