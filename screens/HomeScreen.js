@@ -29,10 +29,10 @@ const HomeScreen = ({ navigation }) => (
       title="LetterDetail"
       onPress={() => navigation.navigate("LetterDetail")}
     />
-    <Button
+    {/* <Button
       title="LettersPage"
       onPress={() => navigation.navigate("LettersPage")}
-    />
+    /> */}
     <Button title="Idioms" onPress={() => navigation.navigate("Idioms")} />
     <Button
       title="Activities"
