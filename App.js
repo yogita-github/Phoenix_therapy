@@ -32,10 +32,10 @@ import SelfLearning2 from "./screens/components/SelfLearning2"
 import SplashScreen from './screens/components/SplashScreen';
 import Activities from "./screens/components/Activities";
 import PeerInside from './screens/components/PeerInside';
-import VarnamalaPage from './screens/components/VarnamalaPage';
+import LettersPage from './screens/components/LettersPage';
 import WordsPage from "./screens/components/WordsPage";
 import CameraScreen from "./screens/components/CameraScreen";
-import LettersPage from './screens/LettersPage';
+// import LettersPage from './screens/LettersPage';
 import LetterDetail from './screens/LetterDetail';
 import HomeScreen from './screens/HomeScreen';
 
@@ -67,8 +67,9 @@ const App = () =>{
           {/* Add other screens or stacks as needed */}
       {/* </Drawer.Navigator> */}
 
-      <Stack.Navigator initialRouteName="IntroPage">
-      <Stack.Screen name="SplashScreen" component={SplashScreen} />
+      <Stack.Navigator initialRouteName="HomeScreen">
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Test" component={Testing} />
@@ -78,15 +79,15 @@ const App = () =>{
         <Stack.Screen name="Balloon" component={Balloon} />
         <Stack.Screen name="IntroPage" component={IntroPage} />
         <Stack.Screen name="Register" component={Register} />
-        <Stack.Screen name="CameraScreen" component={CameraScreen}/>
+        <Stack.Screen name="CameraScreen" component={CameraScreen} />
         <Stack.Screen name="Therapy" component={Therapy} />
         <Stack.Screen name="Profile" component={Profile} />
-  
+
         <Stack.Screen name="QuizGame" component={QuizGame} />
         <Stack.Screen name="TongueTwister" component={TongueTwister} />
         <Stack.Screen name="Sentence" component={Sentence} />
         <Stack.Screen name="Idioms" component={Idioms} />
-        <Stack.Screen name="VarnamalaPage" component={VarnamalaPage} />
+        {/* <Stack.Screen name="LettersPage" component={LettersPage} /> */}
         <Stack.Screen name="AgeTherapy" component={AgeTherapy} />
         <Stack.Screen name="Activities" component={Activities} />
         <Stack.Screen name="TodoApp" component={TodoApp} />
@@ -100,12 +101,12 @@ const App = () =>{
         <Stack.Screen name="Exercise" component={Exercise} />
         <Stack.Screen name="LetsStart" component={LetsStart} />
         <Stack.Screen name="SelfLearning2" component={SelfLearning2} />
-        
+
         <Stack.Screen name="StoryPage" component={StoryPage} />
         <Stack.Screen name="S2" component={S2} />
 
         <Stack.Screen name="LettersPage" component={LettersPage} />
-      <Stack.Screen name="LetterDetail" component={LetterDetail} />
+        <Stack.Screen name="LetterDetail" component={LetterDetail} />
       </Stack.Navigator>
     </NavigationContainer>
   );
