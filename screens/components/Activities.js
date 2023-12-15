@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#FFA500', // Orange text color
-    fontSize: 18,
+    fontSize: 28,
     fontWeight: 'bold',
   },
 });
