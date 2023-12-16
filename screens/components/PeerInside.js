@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigation } from '@react-navigation/native';
-import { View, Text, Image, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity, ScrollView, Linking } from "react-native";
 import * as WebBrowser from 'expo-web-browser'; // Updated import statement
 
 const PeerInside = () => {
@@ -21,6 +21,20 @@ const PeerInside = () => {
   const handleAppointmentButton = async () => {
     await WebBrowser.openBrowserAsync(AppointmentForm);
   };
+
+  const handleCallNumber = (phoneNumber) => {
+    const phoneUrl = `tel:${phoneNumber}`;
+    
+    // Check if the device supports the given URL
+    Linking.canOpenURL(phoneUrl).then((supported) => {
+      if (supported) {
+        // Open the phone dialer with the specified phone number
+        Linking.openURL(phoneUrl);
+      } else {
+        console.warn("Couldn't open the phone dialer.");
+      }
+    });
+  }
 
   return (
     <ScrollView>
@@ -68,7 +82,7 @@ const PeerInside = () => {
               Ganesh Colony, Jalgaon, Maharashtra 425001
             </Text>
             <Text style={styles.fieldLabel}>Contact:</Text>
-            <Text>Phone: +91 9096769868</Text>
+            <Text onPress={handleCallNumber}>Phone: +91 9096769868</Text>
           </View>
         )}
         <TouchableOpacity
