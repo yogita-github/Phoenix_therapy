@@ -14,9 +14,12 @@ const LettersPage = () => {
     });
   }, []);
 
-  const renderLetterItem = ({ item }) => (
+  const renderLetterItem = ({ item, index }) => (
     <TouchableOpacity
-      style={styles.letterItem}
+      style={[
+        styles.letterItem,
+        index < 10 ? styles.greenLetterItem : null
+      ]}
       onPress={() => navigation.navigate('LetterDetail', { letter: item })}
     >
       <Text style={styles.letterText}>{item.letter}</Text>
@@ -26,6 +29,8 @@ const LettersPage = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>वर्णमाला</Text>
+      <Text style={{color:'green'}}>*vowels</Text>
+      <Text style={{color:'orange',marginBottom:10}}>*consonants</Text>
       <FlatList
         data={letters}
         keyExtractor={(item) => item._id}
@@ -38,6 +43,9 @@ const LettersPage = () => {
 };
 
 const styles = StyleSheet.create({
+  greenLetterItem: {
+    backgroundColor: 'green',
+  },
   container: {
     flex: 1,
     padding: 16,
@@ -62,7 +70,7 @@ const styles = StyleSheet.create({
     margin: 4,
   },
   letterText: {
-    color: '#fff',
+    color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
   },

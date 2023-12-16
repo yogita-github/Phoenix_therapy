@@ -99,9 +99,11 @@ const upload = multer({
         cb(null, './uploads/images');
       } else if (file.fieldname === 'video') {
         cb(null, './uploads/videos');
-      } else if (file.fieldname === 'audio') {
-        cb(null, './uploads/audio');
-      } else {
+      } 
+      // else if (file.fieldname === 'audio') {
+      //   cb(null, './uploads/audio');
+      // }
+       else {
         cb(new Error('Invalid fieldname'), null);
       }
     },
@@ -115,7 +117,7 @@ const upload = multer({
 app.post('/save_data', upload.fields([
   { name: 'image', maxCount: 1 },
   { name: 'video', maxCount: 1 },
-  { name: 'audio', maxCount: 12 },
+  // { name: 'audio', maxCount: 12 },
 ]), async (req, res) => {
   try {
     const data = {
@@ -124,10 +126,11 @@ app.post('/save_data', upload.fields([
       video: req.files['video'][0].filename,
       sentences: req.body.sentences.split('\n'),
       words2: req.body.words2.split(','),
-      words: req.body.words.split(',').map((word, index) => ({
-        word: word.trim(),
-        audio: req.files['audio'][index].filename,
-      })),
+      words: req.body.words.split(','),
+      // words: req.body.words.split(',').map((word, index) => ({
+      //   word: word.trim(),
+      //   audio: req.files['audio'][index].filename,
+      // })),
     };
 
     // Save data to MongoDB using the Mongoose model

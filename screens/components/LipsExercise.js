@@ -8,7 +8,6 @@ import {
   StyleSheet,
 } from "react-native";
 import Collapsible from "react-native-collapsible";
-import BottomNavigator from "../BottomNavigator";
 
 const styles = StyleSheet.create({
   container: {

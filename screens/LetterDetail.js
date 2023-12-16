@@ -36,8 +36,7 @@ const LetterDetail = ({ route }) => {
   return (
     <ScrollView contentContainerStyle={styles.scrollView}>
       <Text style={styles.letterText}>{letter.letter}</Text>
-      <Text style={styles.noticeText}>*click the letters</Text>
-      <View style={styles.wordContainer}>
+      {/* <View style={styles.wordContainer}>
         {letter.words.map((word, index) => (
           <View key={index} style={styles.wordButtonContainer}>
             <TouchableOpacity onPress={() => playAudio(word.audio)}>
@@ -47,7 +46,7 @@ const LetterDetail = ({ route }) => {
             </TouchableOpacity>
           </View>
         ))}
-      </View>
+      </View> */}
     
       {letter.image && (
         <Image
@@ -112,7 +111,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   image: {
-    width: '50%',
+    width: '60%',
     height: 130,
     marginBottom: 20,
     alignSelf: 'center',
@@ -132,24 +131,19 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333',
   },
-  wordContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-  },
-  wordButtonContainer: {
-    margin: 8,
-    marginBottom: 50,
-  },
+  // wordContainer: {
+  //   flexDirection: 'row',
+  //   flexWrap: 'wrap',
+  //   justifyContent: 'center',
+  // },
+  // wordButtonContainer: {
+  //   margin: 8,
+  //   marginBottom: 50,
+  // },
   buttonsContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginBottom: 20,
-  },
-  noticeText: {
-    textAlign: "center",
-    color: 'green',
-    width: '100%',
   },
 });
 

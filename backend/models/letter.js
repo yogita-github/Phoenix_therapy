@@ -13,6 +13,7 @@ const letterSchema = new mongoose.Schema({
   video: String,
   sentences: [String],
   words: [wordSchema],
+  words: [String],
   words2: [String],
 });
 
