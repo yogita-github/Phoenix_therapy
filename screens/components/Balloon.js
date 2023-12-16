@@ -36,7 +36,7 @@ const wordData = [
   },
 ];
 
-const Balloon = () => {
+const Balloon = ({navigation}) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [sound, setSound] = useState();
 

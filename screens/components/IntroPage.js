@@ -28,7 +28,7 @@ const IntroPage = ({ navigation }) => {
 
       <TouchableOpacity
         style={styles.grayButton}
-        onPress={() => navigation.navigate("LoginScreen")}
+        onPress={() => navigation.replace("Login")}
       >
         <Text style={styles.buttonText}>I already have an account</Text>
       </TouchableOpacity>

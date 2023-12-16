@@ -1,9 +1,7 @@
 import React from "react";
-import { View, Image, Text, StyleSheet,TouchableOpacity } from "react-native";
+import { View, Image, Text, StyleSheet, TouchableOpacity } from "react-native";
 
-
-const Games = ({navigation}) => {
-    
+const Games = ({ navigation }) => {
   return (
     <>
       <View style={styles.container}>
@@ -14,10 +12,9 @@ const Games = ({navigation}) => {
               style={{
                 width: 30,
                 height: 30,
-                  alignContent:"flex-end",
-                  justifyContent: "flex-end",
-                marginLeft:278,
-                
+                alignContent: "flex-end",
+                justifyContent: "flex-end",
+                marginLeft: 278,
               }}
             />
           </TouchableOpacity>
@@ -35,7 +32,7 @@ const Games = ({navigation}) => {
       </View>
 
       <View style={{ flexDirection: "row" }}>
-        <View
+        <TouchableOpacity
           style={{
             flex: 1,
             backgroundColor: "#FBB718",
@@ -43,6 +40,7 @@ const Games = ({navigation}) => {
             margin: 5,
             padding: 10,
           }}
+          onPress={() => navigation.navigate("Balloon")}
         >
           <Image
             source={require("../../assets/balloon.jpg")}
@@ -53,14 +51,11 @@ const Games = ({navigation}) => {
               marginBottom: 10,
             }}
           />
-          <Text
-            style={{ textAlign: "center", fontWeight: "bold" }}
-            onPress={() => navigation.navigate("Balloon")}
-          >
+          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
             Balloon Game
           </Text>
-        </View>
-        <View
+        </TouchableOpacity>
+        <TouchableOpacity
           style={{
             flex: 1,
             backgroundColor: "#FBB718",
@@ -68,6 +63,7 @@ const Games = ({navigation}) => {
             margin: 5,
             padding: 10,
           }}
+          onPress={() => navigation.navigate("TongueTwister")}
         >
           <Image
             source={{
@@ -80,17 +76,14 @@ const Games = ({navigation}) => {
               marginBottom: 10,
             }}
           />
-          <Text
-            style={{ textAlign: "center", fontWeight: "bold" }}
-            onPress={() => navigation.navigate("TongueTwister")}
-          >
+          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
             Tongue Twister
           </Text>
-        </View>
+        </TouchableOpacity>
       </View>
 
       <View style={{ flexDirection: "row" }}>
-        <View
+        <TouchableOpacity
           style={{
             flex: 1,
             backgroundColor: "#FBB718",
@@ -98,6 +91,7 @@ const Games = ({navigation}) => {
             margin: 5,
             padding: 10,
           }}
+          onPress={() => navigation.navigate("QuizGame")}
         >
           <Image
             source={require("../../assets/quizsound.png")}
@@ -108,14 +102,11 @@ const Games = ({navigation}) => {
               marginBottom: 10,
             }}
           />
-          <Text
-            style={{ textAlign: "center", fontWeight: "bold" }}
-            onPress={() => navigation.navigate("QuizGame")}
-          >
+          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
             Quiz Sound
           </Text>
-        </View>
-        <View
+        </TouchableOpacity>
+        <TouchableOpacity
           style={{
             flex: 1,
             backgroundColor: "#FBB718",
@@ -123,23 +114,22 @@ const Games = ({navigation}) => {
             margin: 5,
             padding: 10,
           }}
+          onPress={() => navigation.navigate("ArticulationMaze")}
         >
           <Image
             source={require("../../assets/articulationmaze.png")}
             style={{
-              width: "100%",
+              width: "80%",
               height: 100,
               borderRadius: 5,
               marginBottom: 10,
+              alignSelf:'center'
             }}
           />
-          <Text
-            style={{ textAlign: "center", fontWeight: "bold" }}
-            onPress={() => navigation.navigate("ArticulationMaze")}
-          >
+          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
             Articulation Maze
           </Text>
-        </View>
+        </TouchableOpacity>
       </View>
     </>
   );
@@ -168,6 +158,5 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
-
 
 export default Games;

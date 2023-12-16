@@ -32,10 +32,9 @@ import SelfLearning2 from "./screens/components/SelfLearning2"
 import SplashScreen from './screens/components/SplashScreen';
 import Activities from "./screens/components/Activities";
 import PeerInside from './screens/components/PeerInside';
-import LettersPage from './screens/components/LettersPage';
 import WordsPage from "./screens/components/WordsPage";
 import CameraScreen from "./screens/components/CameraScreen";
-// import LettersPage from './screens/LettersPage';
+import LettersPage from './screens/LettersPage';
 import LetterDetail from './screens/LetterDetail';
 import HomeScreen from './screens/HomeScreen';
 
@@ -67,7 +66,7 @@ const App = () =>{
           {/* Add other screens or stacks as needed */}
       {/* </Drawer.Navigator> */}
 
-      <Stack.Navigator initialRouteName="HomeScreen">
+      <Stack.Navigator initialRouteName="SplashScreen">
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />

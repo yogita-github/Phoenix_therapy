@@ -154,7 +154,7 @@
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 
-const AgeTherapy = () => {
+const AgeTherapy = ({navigation}) => {
   const [selectedAgeCategory, setSelectedAgeCategory] = useState("small");
 
   const ageCategories = [
@@ -201,7 +201,7 @@ const AgeTherapy = () => {
     <View style={styles.container}>
       <View style={styles.header}>
         {/* Home Icon */}
-        <TouchableOpacity onPress={() => navigation.navigate("HomeSide")}>
+        <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
           <Image
             source={require("../../assets/homeicon.jpeg")}
             style={styles.homeIcon}

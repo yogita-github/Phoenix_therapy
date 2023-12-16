@@ -66,7 +66,7 @@ const CollapsibleComponent = ({ title, imageSource, procedure }) => {
   );
 };
 
-const MouthExercise = () => {
+const MouthExercise = ({navigation}) => {
   return (
     <><View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>

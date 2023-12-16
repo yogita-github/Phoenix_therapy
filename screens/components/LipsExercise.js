@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const CollapsibleComponent = ({ title, imageSource, procedure }) => {
+const CollapsibleComponent = ({ title, imageSource, procedure, }) => {
   const [isCollapsed, setIsCollapsed] = React.useState(true);
 
   return (
@@ -68,7 +68,7 @@ const CollapsibleComponent = ({ title, imageSource, procedure }) => {
   );
 };
 
-const LipsExercise = () => {
+const LipsExercise = ({navigation}) => {
   return (<><View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
           <Image

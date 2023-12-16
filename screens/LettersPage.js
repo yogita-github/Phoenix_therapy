@@ -25,15 +25,14 @@ const LettersPage = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Vowels</Text>
+      <Text style={styles.title}>वर्णमाला</Text>
       <FlatList
         data={letters}
         keyExtractor={(item) => item._id}
-        numColumns={6}
+        numColumns={5}
         renderItem={renderLetterItem}
         contentContainerStyle={styles.flatListContainer}
       />
-      <Text style={styles.title}>Consonants</Text>
     </View>
   );
 };
@@ -48,6 +47,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 12,
+    textAlign: 'center'
   },
   flatListContainer: {
     alignItems: 'center',

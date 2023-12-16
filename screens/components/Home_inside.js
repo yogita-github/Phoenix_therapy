@@ -25,7 +25,7 @@ const HomeSide = ({ navigation }) => {
       </View>
 
       <View style={{ flexDirection: "row" }}>
-        <View
+        <TouchableOpacity
           style={{
             flex: 1,
             backgroundColor: "#FBB718",
@@ -44,6 +44,7 @@ const HomeSide = ({ navigation }) => {
             marginLeft: 19,
             aspectRatio: 1,
           }}
+          onPress={() => navigation.navigate("Games")}
         >
           <Image
             source={require("../../assets/games.png")}
@@ -56,12 +57,11 @@ const HomeSide = ({ navigation }) => {
           />
           <Text
             style={{ textAlign: "center", fontWeight: "bold" }}
-            onPress={() => navigation.navigate("Games")}
           >
             Games
           </Text>
-        </View>
-        <View
+        </TouchableOpacity>
+        <TouchableOpacity
           style={{
             flex: 1,
             backgroundColor: "#FBB718",
@@ -80,6 +80,7 @@ const HomeSide = ({ navigation }) => {
             marginLeft: 19,
             aspectRatio: 1,
           }}
+          onPress={() => navigation.navigate("Activities")}
         >
           <Image
             source={require("../../assets/activities.png")}
@@ -92,15 +93,14 @@ const HomeSide = ({ navigation }) => {
           />
           <Text
             style={{ textAlign: "center", fontWeight: "bold" }}
-            onPress={() => navigation.navigate("Activities")}
           >
             Activities
           </Text>
-        </View>
+        </TouchableOpacity>
       </View>
 
       <View style={{ flexDirection: "row" }}>
-        <View
+        <TouchableOpacity
           style={{
             flex: 1,
             backgroundColor: "#FBB718",
@@ -119,6 +119,7 @@ const HomeSide = ({ navigation }) => {
             marginLeft: 19,
             aspectRatio: 1,
           }}
+          onPress={() => navigation.navigate("PeerInside")}
         >
           <Image
             source={require("../../assets/Peer-to-Peer.png")}
@@ -131,12 +132,11 @@ const HomeSide = ({ navigation }) => {
           />
           <Text
             style={{ textAlign: "center", fontWeight: "bold" }}
-            onPress={() => navigation.navigate("PeerInside")}
           >
             Peer-to-Peer
           </Text>
-        </View>
-        <View
+        </TouchableOpacity>
+        <TouchableOpacity
           style={{
             flex: 1,
             backgroundColor: "#FBB718",
@@ -155,6 +155,7 @@ const HomeSide = ({ navigation }) => {
             marginLeft: 19,
             aspectRatio: 1,
           }}
+          onPress={() => navigation.navigate("Exercise")}
         >
           <Image
             source={require("../../assets/Exercise.png")}
@@ -167,11 +168,10 @@ const HomeSide = ({ navigation }) => {
           />
           <Text
             style={{ textAlign: "center", fontWeight: "bold" }}
-            onPress={() => navigation.navigate("Exercise")}
           >
             Exercise
           </Text>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );

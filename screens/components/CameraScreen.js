@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { View, TouchableOpacity, Text,Image,StyleSheet } from 'react-native';
+import { View, TouchableOpacity, Text, Image, StyleSheet } from 'react-native';
 import { Camera } from 'expo-camera';
 
-const CameraScreen = () => {
+const CameraScreen = ({ navigation }) => {
   const [hasPermission, setHasPermission] = useState(null);
   const [type, setType] = useState(Camera.Constants.Type.back);
   const cameraRef = useRef(null);
@@ -20,6 +20,7 @@ const CameraScreen = () => {
         try {
           if (cameraRef.current.status === 'STOPPED') {
             await cameraRef.current.resumePreview();
+            
           } else {
             await cameraRef.current.pausePreview();
           }
@@ -50,12 +51,10 @@ const CameraScreen = () => {
     <>
       <View style={styles.header}>
         {/* Home Icon */}
-        <TouchableOpacity onPress={() => navigation.navigate("HomeSide")}>
+        <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
           <Image
+            style={{ width: 30, height: 30, marginBottom: 5 }}
             source={require("../../assets/homeicon.jpeg")}
-           
-             
-            
           />
         </TouchableOpacity>
       </View>
@@ -69,32 +68,32 @@ const CameraScreen = () => {
           <View
             style={{
               flex: 1,
-              backgroundColor: "transparent",
-              flexDirection: "row",
+              backgroundColor: 'transparent',
+              flexDirection: 'row',
             }}
           >
             <TouchableOpacity
               style={{
                 flex: 0.1,
-                alignSelf: "flex-end",
-                alignItems: "center",
+                alignSelf: 'flex-end',
+                alignItems: 'center',
               }}
               onPress={handleCameraTypeToggle}
             >
-              <Text style={{ fontSize: 18, marginBottom: 10, color: "white" }}>
+              <Text style={{ fontSize: 18, marginBottom: 10, color: 'white' }}>
                 Flip
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={{
                 flex: 0.1,
-                alignSelf: "flex-end",
-                alignItems: "center",
+                alignSelf: 'flex-end',
+                alignItems: 'center',
               }}
               onPress={handleStartStopCamera}
             >
-              <Text style={{ fontSize: 18, marginBottom: 10, color: "white" }}>
-                {cameraRef.current?.status === "STOPPED" ? "Start" : "Stop"}
+              <Text style={{ fontSize: 18, marginBottom: 10, color: 'white' }}>
+                {cameraRef.current?.status === 'STOPPED' ? 'Start' : 'Stop'}
               </Text>
             </TouchableOpacity>
           </View>
@@ -103,13 +102,15 @@ const CameraScreen = () => {
     </>
   );
 };
+
 const styles = StyleSheet.create({
   header: {
     width: 30,
     height: 30,
-    alignContent: "flex-end",
-    justifyContent: "flex-end",
+    alignContent: 'flex-end',
+    justifyContent: 'flex-end',
     marginLeft: 278,
   },
 });
+
 export default CameraScreen;

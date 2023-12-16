@@ -25,12 +25,12 @@ const Activities = ({navigation}) => {
 
       <TouchableOpacity
         style={styles.activityButton}
-        // onPress={() => navigation.navigate('VarnamalaPage')}
+        onPress={() => navigation.navigate('LettersPage')}
         activeOpacity={0.7}
       >
         <Text
           style={styles.buttonText}
-          onPress={() => navigation.navigate("VarnamalaPage")}
+          onPress={() => navigation.navigate("LettersPage")}
         >
           Varnamala
         </Text>

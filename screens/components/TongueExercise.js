@@ -73,7 +73,7 @@ const CollapsibleComponent = ({ title, imageSource, procedure }) => {
   );
 };
 
-const TongueExercise = () => {
+const TongueExercise = ({navigation}) => {
   return (<><View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
           <Image

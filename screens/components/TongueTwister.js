@@ -24,7 +24,7 @@ const phrases = [
   "Challenge your speaking skills!",
 ];
 
-const TongueTwister = () => {
+const TongueTwister = ({navigation}) => {
   const [isPlaying, setIsPlaying] = useState(Array(audioFiles.length).fill(false));
   const [sounds, setSounds] = useState(Array(audioFiles.length).fill(null));
 

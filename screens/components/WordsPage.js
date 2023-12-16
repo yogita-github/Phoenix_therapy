@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet,Image,TouchableOpacity } from "react-native";
 
-const WordsPage = () => {
+const WordsPage = ({navigation}) => {
   const hindiWords = [
     "नमस्ते",
     "धन्यवाद",
