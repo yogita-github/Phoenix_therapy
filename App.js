@@ -98,8 +98,8 @@ const App = () =>{
         <Stack.Screen name="TongueExercise" component={TongueExercise} />
         <Stack.Screen name="MouthExercise" component={MouthExercise} />
         <Stack.Screen name="Exercise" component={Exercise} />
-        <Stack.Screen name="LetsStart" component={LetsStart} />
-        <Stack.Screen name="SelfLearning2" component={SelfLearning2} />
+        <Stack.Screen name="LetsStart" component={LetsStart} options={{ headerShown: false }} />
+        <Stack.Screen name="SelfLearning" component={SelfLearning2} />
 
         <Stack.Screen name="StoryPage" component={StoryPage} />
         <Stack.Screen name="S2" component={S2} />
@@ -113,3 +113,6 @@ const App = () =>{
 
 
 export default App;
+
+
+

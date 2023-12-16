@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const HomeSide = ({ navigation }) => {
   return (
+    <View style={styles.pageContainer}>
     <View style={{ backgroundColor: "#FFF2CC" }}>
       <View style={styles.container}>
         <View style={styles.header}>
@@ -174,20 +175,28 @@ const HomeSide = ({ navigation }) => {
         </TouchableOpacity>
       </View>
     </View>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
+  pageContainer: {
+    flex: 1,
+    backgroundColor: "#FFF2CC", // Set the yellow background color here
+  },
   container: {
-    padding: 20,
+    padding: 40,
     alignItems: "center",
   },
   heading: {
+    paddingTop:30,
+    textAlign:'center',
     fontSize: 18,
     fontWeight: "bold",
     paddingBottom: "50px",
   },
   homeText: {
+    textAlign:'center',
     fontSize: 18,
     fontWeight: "bold",
     textAlign: "center",

@@ -1,28 +1,19 @@
 import React, { useState } from "react";
 import { useNavigation } from '@react-navigation/native';
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  TouchableOpacity,
-  ScrollView,
-} from "react-native";
-import { WebBrowser } from 'expo';
+import { View, Text, Image, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
+import * as WebBrowser from 'expo-web-browser'; // Updated import statement
 
 const PeerInside = () => {
   const navigation = useNavigation();
 
   const [isCollapsed, setCollapsed] = useState(true);
 
-  // Define the drive link
   const driveLink =
     "https://drive.google.com/file/d/1LzJWk387DthQ9r_0pS9o6YfohDUHf6fI/view?usp=drive_link";
 
   const AppointmentForm =
     "https://docs.google.com/forms/d/e/1FAIpQLSeD3SqCezrTy-4K-7nUeTH62EXELIhTuQgw4sUhpkoyynESDQ/viewform";
 
-  // Handle certification button press
   const handleCertificationButton = async () => {
     await WebBrowser.openBrowserAsync(driveLink);
   };
@@ -33,81 +24,66 @@ const PeerInside = () => {
 
   return (
     <ScrollView>
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
+            <Image
+              source={require("../../assets/homeicon.jpeg")}
+              style={{
+                width: 30,
+                height: 30,
+                alignSelf: 'flex-end',
+                marginRight: 10,
+              }}
+            />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.yellowBox}>
           <Image
-            source={require("../../assets/homeicon.jpeg")}
-            style={{
-              width: 30,
-              height: 30,
-              alignContent: "flex-end",
-              justifyContent: "flex-end",
-              marginLeft: 278,
-            }}
+            source={require("../../assets/peerUp.png")}
+            style={styles.yellowBoxImage}
           />
+        </View>
+        <Text style={styles.heading}>Certified Therapist</Text>
+        <TouchableOpacity
+          style={styles.greyBoxHeader}
+          onPress={() => setCollapsed(!isCollapsed)}
+        >
+          <Image
+            source={require("../../assets/RajshriMam.png")}
+            style={styles.image}
+          />
+          <View style={styles.textContainer}>
+            <Text style={[styles.name, styles.underline]}>
+              Ms. Rajshri Shantaram Wagh
+            </Text>
+            <Text style={styles.name1}>Speech Therapist</Text>
+          </View>
+        </TouchableOpacity>
+        {!isCollapsed && (
+          <View style={styles.dropdownContent}>
+            <Text style={styles.fieldLabel}> Clinic Address:</Text>
+            <Text>
+              Infront of Dr. Babasaheb Ambedkar Garden Near Khwajamia Dargah,
+              Ganesh Colony, Jalgaon, Maharashtra 425001
+            </Text>
+            <Text style={styles.fieldLabel}>Contact:</Text>
+            <Text>Phone: +91 9096769868</Text>
+          </View>
+        )}
+        <TouchableOpacity
+          style={styles.certificationButton}
+          onPress={handleCertificationButton}
+        >
+          <Text style={styles.buttonText}>Certification</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.AppointmentFormButton}
+          onPress={handleAppointmentButton}
+        >
+          <Text style={styles.buttonText}>AppointmentForm</Text>
         </TouchableOpacity>
       </View>
-      {/* Yellow box at the top with an image */}
-      <View style={styles.yellowBox}>
-        <Image
-          source={require("../../assets/peerUp.png")}
-          style={styles.yellowBoxImage}
-        />
-      </View>
-
-      {/* Suggested Names of Therapist */}
-      <Text style={styles.heading}>Certified Therapist</Text>
-
-      {/* Light grey box with an image, name, and collapsible */}
-      <TouchableOpacity
-        style={styles.greyBoxHeader}
-        onPress={() => setCollapsed(!isCollapsed)}
-      >
-        {/* Left side with an image */}
-        <Image
-          source={require("../../assets/RajshriMam.png")}
-          style={styles.image}
-        />
-
-        {/* Right side with name */}
-        <View style={styles.textContainer}>
-          <Text style={[styles.name, styles.underline]}>
-            Ms. Rajshri Shantaram Wagh
-          </Text>
-          <Text style={styles.name1}>Speech Therapist</Text>
-        </View>
-      </TouchableOpacity>
-
-      {/* Collapsible content, replace with your actual collapsible component */}
-      {!isCollapsed && (
-        <View style={styles.dropdownContent}>
-          <Text style={styles.fieldLabel}> Clinic Address:</Text>
-          <Text>
-            Infront of Dr. Babasaheb Ambedkar Garden Near Khwajamia
-            Dargah,Ganesh Colony,Jalgaon, Maharashtra 425001
-          </Text>
-          <Text style={styles.fieldLabel}>Contact:</Text>
-          <Text>Phone: +91 9096769868</Text>
-        </View>
-      )}
-
-      {/* Certification button */}
-      <TouchableOpacity
-        style={styles.certificationButton}
-        onPress={handleCertificationButton}
-      >
-        <Text style={styles.buttonText}>Certification</Text>
-      </TouchableOpacity>
-
-      {/* Appointment button */}
-      <TouchableOpacity
-        style={styles.AppointmentFormButton}
-        onPress={handleAppointmentButton}
-      >
-        <Text style={styles.buttonText}>AppointmentForm</Text>
-      </TouchableOpacity>
-    </View>
     </ScrollView>
   );
 };
@@ -117,6 +93,11 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     backgroundColor: "#FFFBEF",
+  },
+  header: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    marginBottom: 10,
   },
   yellowBox: {
     height: 300,

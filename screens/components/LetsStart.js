@@ -31,7 +31,7 @@ const LetsStart = ({ navigation }) => {
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.rectangle2, { backgroundColor: "#00D015" }]}
-          onPress={() => navigation.navigate("SelfLearning2")}
+          onPress={() => navigation.navigate("SelfLearning")}
         >
           {/* Parrot color */}
           <Image
@@ -67,6 +67,7 @@ paddingTop: 50,
 backgroundColor: "#FFFBEF",
 },
 centerText: {
+  marginTop:80,
 textAlign: "center",
 fontSize: 17,
 },
@@ -113,6 +114,7 @@ color: "white",
 fontWeight: "bold",
 },
 profileIcon: {
+marginTop: 60,
 position: "absolute",
 top: 10,
 right: 10,

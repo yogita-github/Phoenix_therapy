@@ -21,6 +21,12 @@ const LoginScreen = ({ navigation }) => {
 
   const handleLogin = async () => {
     try {
+      // Check if either username or password is blank
+      if (!name.trim() || !password.trim()) {
+        alert("Please enter both username and password.");
+        return;
+      }
+  
       const response = await fetch("http://192.168.43.65:1000/login", {
         method: "POST",
         headers: {
@@ -31,12 +37,12 @@ const LoginScreen = ({ navigation }) => {
           password: password,
         }),
       });
-
+  
       if (response.ok) {
         const result = await response.json();
         console.log("Login successful:", result);
         await SecureStore.setItemAsync("token", result.token);
-
+  
         navigation.navigate("LetsStart");
       } else {
         console.error("Login failed:", response.status);
@@ -86,7 +92,9 @@ const LoginScreen = ({ navigation }) => {
           <Text style={styles.socialText}>Facebook</Text>
         </View>
       </View>
-
+      <TouchableOpacity onPress={() => navigation.navigate("Register")}>
+        <Text style={styles.loginLink}>Do not have account? Register here</Text>
+      </TouchableOpacity>
       <Text style={styles.termsText}>
         By using PhonoFix, you are agreeing to our Terms and Conditions,
         including Privacy Policy.
@@ -175,6 +183,11 @@ const styles = StyleSheet.create({
   termsText: {
     color: "white",
     textAlign: "center",
+  },
+  loginLink: {
+    color: "white",
+    marginTop: 20,
+    marginBottom: 10,
   },
 });
 

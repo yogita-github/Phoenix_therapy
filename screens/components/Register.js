@@ -8,8 +8,13 @@ const Register = ({ navigation }) => {
 
   const handleRegister = async () => {
     try {
+      // Check if any field is blank
+      if (!name.trim() || !email.trim() || !password.trim()) {
+        alert("Please fill in all fields.");
+        return;
+      }
+  
       const response = await fetch("http://192.168.43.65:1000/register", {
-        // const response = await fetch("http://localhost:1000/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -20,15 +25,16 @@ const Register = ({ navigation }) => {
           password,
         }),
       });
-
+  
       const result = await response.json();
       console.log(result);
-
+  
       navigation.navigate("Login");
     } catch (error) {
       console.error('Error during registration:', error);
     }
   };
+  
 
   return (
     <View style={styles.container}>
