@@ -43,7 +43,7 @@ const Games = ({ navigation }) => {
           onPress={() => navigation.navigate("Balloon")}
         >
           <Image
-            source={require("../../assets/balloon.jpg")}
+            source={{uri:"https://img.freepik.com/free-vector/cute-giraffe-playing-dj-electronic-music-with-headphone-cartoon-vector-icon-illustration-animal_138676-7791.jpg?size=626&ext=jpg&uid=R97019349&ga=GA1.1.1315413171.1679411364&semt=ais"}}
             style={{
               width: "100%",
               height: 100,
@@ -52,7 +52,7 @@ const Games = ({ navigation }) => {
             }}
           />
           <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            Balloon Game
+            Sound Safari
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -123,7 +123,7 @@ const Games = ({ navigation }) => {
               height: 100,
               borderRadius: 5,
               marginBottom: 10,
-              alignSelf:'center'
+              alignSelf: "center",
             }}
           />
           <Text style={{ textAlign: "center", fontWeight: "bold" }}>
