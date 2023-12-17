@@ -44,7 +44,7 @@ const Games = ({ navigation }) => {
         >
           <Image
             source={{
-              uri: "https://img.freepik.com/free-vector/cute-giraffe-playing-dj-electronic-music-with-headphone-cartoon-vector-icon-illustration-animal_138676-7791.jpg?size=626&ext=jpg&uid=R97019349&ga=GA1.1.1315413171.1679411364&semt=ais",
+              uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnF8CAKlwzJvoGO2YVgnSgarffOph-cMgH4w&usqp=CAU",
             }}
             style={{
               width: "100%",
@@ -105,7 +105,7 @@ const Games = ({ navigation }) => {
             }}
           />
           <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            Quiz Sound
+            Quiz Game
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
