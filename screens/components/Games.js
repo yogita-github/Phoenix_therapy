@@ -40,7 +40,7 @@ const Games = ({ navigation }) => {
             margin: 5,
             padding: 10,
           }}
-          onPress={() => navigation.navigate("Balloon")}
+          onPress={() => navigation.navigate("Sound Safari")}
         >
           <Image
             source={{uri:"https://img.freepik.com/free-vector/cute-giraffe-playing-dj-electronic-music-with-headphone-cartoon-vector-icon-illustration-animal_138676-7791.jpg?size=626&ext=jpg&uid=R97019349&ga=GA1.1.1315413171.1679411364&semt=ais"}}

@@ -33,7 +33,7 @@ const SelfLearning2 = ({ navigation }) => {
           >
             <View style={{ alignItems: 'center' }}>
               <Image
-                source={require('../../assets/Mirrorlogo.jpeg')}
+                source={require('../../assets/mirrorlogo.png')}
                 style={{
                   width: '60%',
                   height: 100,
@@ -53,7 +53,7 @@ const SelfLearning2 = ({ navigation }) => {
           >
             <View style={{ alignItems: 'center' }}>
               <Image
-                source={require('../../assets/Agelogo.jpeg')}
+                source={require('../../assets/Agelogo.png')}
                 style={{
                   width: '100%',
                   height: 100,

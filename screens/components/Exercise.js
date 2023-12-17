@@ -26,7 +26,7 @@ const Exercise = ({ navigation }) => {
       </View>
       <View style={styles.exerciseContainer}>
         <Image
-          source={require("../../assets/exerciselogo.jpeg")}
+          source={require("../../assets/exerciselogo.png")}
           style={styles.logoImage}
         />
       </View>

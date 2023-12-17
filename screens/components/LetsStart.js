@@ -24,7 +24,7 @@ const LetsStart = ({ navigation }) => {
         >
           {/* Purplish color */}
           <Image
-            source={require("../../assets/testicon.jpeg")}
+            source={require("../../assets/testicon.png")}
             style={[styles.image, styles.border]}
           />
           <Text style={styles.text}>Start AI Test</Text>
@@ -35,7 +35,7 @@ const LetsStart = ({ navigation }) => {
         >
           {/* Parrot color */}
           <Image
-            source={require("../../assets/selficon.jpeg")}
+            source={require("../../assets/selficon.png")}
             style={[styles.image, styles.border]}
           />
           <Text style={styles.text}>Self Learning</Text>
@@ -46,7 +46,7 @@ const LetsStart = ({ navigation }) => {
         >
           {/* Dark Yellow color */}
           <Image
-            source={require("../../assets/homeicon.jpeg")}
+            source={require("../../assets/home.png")}
             style={[styles.image, styles.border]}
           />
           <Text style={styles.text}>Go To Home</Text>
