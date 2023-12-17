@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
   },
   yellowBox: {
     height: 300,
-    backgroundColor: "yellow",
+    backgroundColor: "#FBB718",
     marginTop: 10,
     borderRadius: 20,
     justifyContent: "center",
