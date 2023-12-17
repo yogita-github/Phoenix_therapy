@@ -22,7 +22,7 @@ const Games = ({ navigation }) => {
         <View style={styles.imageContainer}>
           <Image
             source={{
-              uri: "https://images.unsplash.com/photo-1657302155485-790b74d0b5d1?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              uri: "https://th.bing.com/th/id/OIP.Me_OQNI91B-TD-KsE8vGpgHaE7?w=230&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
             }}
             style={styles.image}
           />
@@ -43,7 +43,9 @@ const Games = ({ navigation }) => {
           onPress={() => navigation.navigate("Balloon")}
         >
           <Image
-            source={{uri:"https://img.freepik.com/free-vector/cute-giraffe-playing-dj-electronic-music-with-headphone-cartoon-vector-icon-illustration-animal_138676-7791.jpg?size=626&ext=jpg&uid=R97019349&ga=GA1.1.1315413171.1679411364&semt=ais"}}
+            source={{
+              uri: "https://img.freepik.com/free-vector/cute-giraffe-playing-dj-electronic-music-with-headphone-cartoon-vector-icon-illustration-animal_138676-7791.jpg?size=626&ext=jpg&uid=R97019349&ga=GA1.1.1315413171.1679411364&semt=ais",
+            }}
             style={{
               width: "100%",
               height: 100,
