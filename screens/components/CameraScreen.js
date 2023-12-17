@@ -84,7 +84,7 @@ const CameraScreen = ({ navigation }) => {
                 Flip
               </Text>
             </TouchableOpacity>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               style={{
                 flex: 0.1,
                 alignSelf: 'flex-end',
@@ -95,7 +95,7 @@ const CameraScreen = ({ navigation }) => {
               <Text style={{ fontSize: 18, marginBottom: 10, color: 'white' }}>
                 {cameraRef.current?.status === 'STOPPED' ? 'Start' : 'Stop'}
               </Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </View>
         </Camera>
       </View>
