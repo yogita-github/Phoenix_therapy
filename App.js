@@ -16,6 +16,7 @@ import Timer from './screens/components/Timer';
 // import BottomNavigator from './screens/BottomNavigator';
 import Therapy from './screens/components/Therapy';
 import Profile from './screens/components/Profile';
+import Barakhadi from "./screens/components/Barakhadi";
 
 import QuizGame from './screens/components/QuizGame';
 import TongueTwister from './screens/components/TongueTwister';
@@ -66,13 +67,14 @@ const App = () =>{
           {/* Add other screens or stacks as needed */}
       {/* </Drawer.Navigator> */}
 
-      <Stack.Navigator initialRouteName="SplashScreen">
-        {/* <Stack.Screen name="HomeScreen" component={HomeScreen} /> */}
+      <Stack.Navigator initialRouteName="HomeScreen">
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Test" component={Testing} />
         <Stack.Screen name="Games" component={Games} />
+        <Stack.Screen name="Barakhadi" component={Barakhadi}/>
         <Stack.Screen name="PeerInside" component={PeerInside} />
         <Stack.Screen name="HomeSide" component={HomeSide} />
         <Stack.Screen name="Sound Safari" component={Balloon} />
