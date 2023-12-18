@@ -5,7 +5,7 @@ function Testing() {
   return (
     <WebView
       // source={{ uri: 'https://chat.openai.com/c/3704d655-7144-4145-89a7-48b33caae49f' }}
-      source={{ uri: 'https://d17f2aa69585f34cda.gradio.live' }}
+      source={{ uri: 'https://6fb706dc2fed9b673e.gradio.live' }}
       style={{ flex: 1 }}
     />
   );
