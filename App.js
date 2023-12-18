@@ -66,7 +66,7 @@ const App = () =>{
           {/* Add other screens or stacks as needed */}
       {/* </Drawer.Navigator> */}
 
-      <Stack.Navigator initialRouteName="HomeScreen">
+      <Stack.Navigator initialRouteName="SplashScreen">
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />

@@ -5,27 +5,27 @@ import {
   Image,
   StyleSheet,
   ScrollView,
-  TouchableOpacity,
+  // TouchableOpacity,
   TouchableHighlight,
 } from 'react-native';
 import { Video as ExpoVideo } from 'expo-av';
-import { Audio } from 'expo-av';
+// import { Audio } from 'expo-av';
 
 const LetterDetail = ({ route }) => {
   const { letter } = route.params;
   const [showWords2, setShowWords2] = useState(false);
   const [showSentences, setShowSentences] = useState(false);
 
-  const playAudio = async (audio) => {
-    try {
-      const { sound } = await Audio.Sound.createAsync(
-        { uri: `http://192.168.43.65:1000/uploads/audio/${audio}` },
-        { shouldPlay: true }
-      );
-    } catch (error) {
-      console.error('Error playing audio:', error);
-    }
-  };
+  // const playAudio = async (audio) => {
+  //   try {
+  //     const { sound } = await Audio.Sound.createAsync(
+  //       { uri: `http://192.168.43.65:1000/uploads/audio/${audio}` },
+  //       { shouldPlay: true }
+  //     );
+  //   } catch (error) {
+  //     console.error('Error playing audio:', error);
+  //   }
+  // };
 
   const buttonStyle = {
     backgroundColor: 'orange',
