@@ -36,6 +36,19 @@ const Activities = ({navigation}) => {
         </Text>
       </TouchableOpacity>
 
+      <TouchableOpacity
+        style={styles.activityButton}
+        onPress={() => navigation.navigate('Barakhadi')}
+        activeOpacity={0.7}
+      >
+        <Text
+          style={styles.buttonText}
+          onPress={() => navigation.navigate("Barakhadi")}
+        >
+          Barakhadi
+        </Text>
+      </TouchableOpacity>
+
       <TouchableOpacity style={styles.activityButton} activeOpacity={0.7}>
         <Text
           style={styles.buttonText}

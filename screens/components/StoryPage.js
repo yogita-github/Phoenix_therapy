@@ -40,8 +40,8 @@
 //           <Text style={styles.playButtonText}>Play</Text>
 //         </TouchableOpacity>
 //       )}
-      
-      
+
+
 //     </View>
 //   );
 
@@ -153,9 +153,9 @@
 
 
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet,Image, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView } from 'react-native';
 
-const StoriesPage = ({navigation}) => {
+const StoriesPage = ({ navigation }) => {
   const storyNames = [
     "शेर और चूहा",
     "लकड़हारा और सुनहरी कुल्हाड़ी की कहानी",
@@ -169,41 +169,43 @@ const StoriesPage = ({navigation}) => {
 
   return (
     <ScrollView>
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
-          <Image
-            source={require("../../assets/homeicon.jpeg")}
-            style={{
-              width: 30,
-              height: 30,
-              alignContent: "flex-end",
-              justifyContent: "flex-end",
-              marginLeft: 278,
-            }}
-          />
-        </TouchableOpacity>
-      </View>
-      <Text style={styles.heading}>Stories</Text>
-      {storyNames.map((name, index) => (
-        <View key={index + 1} style={styles.buttonContainer}>
-          <View style={styles.buttonNumberContainer}>
-            <Text
-              style={styles.buttonNumber}
-              onPress={() => navigation.navigate("S2")}
-            >
-              {index + 1}
-            </Text>
-          </View>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => console.log(`Button ${index + 1} (${name}) pressed`)}
-          >
-            <Text style={styles.buttonText}>{name}</Text>
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
+            <Image
+              source={require("../../assets/homeicon.jpeg")}
+              style={{
+                width: 30,
+                height: 30,
+                alignContent: "flex-end",
+                justifyContent: "flex-end",
+                marginLeft: 278,
+              }}
+            />
           </TouchableOpacity>
         </View>
-      ))}
-    </View>
+        <Text style={styles.heading}>Stories</Text>
+        {storyNames.map((name, index) => (
+          <View key={index + 1} style={styles.buttonContainer}>
+            <View style={styles.buttonNumberContainer}>
+              <Text
+                style={styles.buttonNumber}
+                onPress={() => navigation.navigate("S2")}
+              >
+                {index + 1}
+              </Text>
+            </View>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => navigation.navigate("S2")}
+            >
+              <Text style={styles.buttonText}>{name}</Text>
+            </TouchableOpacity>
+
+
+          </View>
+        ))}
+      </View>
     </ScrollView>
   );
 };

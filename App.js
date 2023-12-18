@@ -68,10 +68,11 @@ const App = () =>{
       {/* </Drawer.Navigator> */}
 
 
-      <Stack.Navigator initialRouteName="HomeScreen">
+      <Stack.Navigator initialRouteName="SplashScreen">
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
 {/* 
       <Stack.Navigator initialRouteName="SplashScreen">
+      
 
         <Stack.Screen name="HomeScreen" component={HomeScreen} /> */}
 
