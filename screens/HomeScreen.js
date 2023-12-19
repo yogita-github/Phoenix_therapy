@@ -23,6 +23,7 @@ const HomeScreen = ({ navigation }) => (
       <Button title="Test" onPress={() => navigation.navigate("Test")} />
       <Button title="Therapy" onPress={() => navigation.navigate("Therapy")} />
       <Button title="Profile" onPress={() => navigation.navigate("Profile")} />
+      
       <Button title="Barakhadi" onPress={() => navigation.navigate("Barakhadi")} />
 
       <Button
@@ -34,10 +35,6 @@ const HomeScreen = ({ navigation }) => (
         onPress={() => navigation.navigate("Progress")}
       />
 
-      <Button
-        title="PeerInside"
-        onPress={() => navigation.navigate("PeerInside")}
-      />
 
       <Button
         title="QuizGame"

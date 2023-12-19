@@ -30,7 +30,108 @@ const Games = ({ navigation }) => {
 
         <Text style={styles.heading}>Learn while having fun</Text>
       </View>
+      <View style={{ flexDirection: "row" }}>
+        <TouchableOpacity
+          style={{
+            flex: 1,
+            backgroundColor: "#FBB718",
+            borderRadius: 5,
+            margin: 5,
+            padding: 10,
+          }}
+          onPress={() => navigation.navigate("QuizGame")}
+        >
+          <Image
+            source={require("../../assets/quizsound.png")}
+            style={{
+              width: "100%",
+              height: 100,
+              borderRadius: 5,
+              marginBottom: 10,
+            }}
+          />
+          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+            Quiz Game
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            flex: 1,
+            backgroundColor: "#FBB718",
+            borderRadius: 5,
+            margin: 5,
+            padding: 10,
+          }}
+          onPress={() => navigation.navigate("ArticulationMaze")}
+        >
+          <Image
+            source={require("../../assets/articulationmaze.png")}
+            style={{
+              width: "80%",
+              height: 100,
+              borderRadius: 5,
+              marginBottom: 10,
+              alignSelf: "center",
+            }}
+          />
+          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+            Articulation Maze
+          </Text>
+        </TouchableOpacity>
+      </View>
 
+      <View style={{ flexDirection: "row" }}>
+        <TouchableOpacity
+          style={{
+            flex: 1,
+            backgroundColor: "#FBB718",
+            borderRadius: 5,
+            margin: 5,
+            padding: 10,
+          }}
+          onPress={() => navigation.navigate("ArrangingWords")}
+        >
+          <Image
+            source={{
+              uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdPzEaeybz9XgF8pumK_Ek3zhwZFPEqz5FJw&usqp=CAU",
+            }}
+            style={{
+              width: "100%",
+              height: 100,
+              borderRadius: 5,
+              marginBottom: 10,
+            }}
+          />
+          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+            ArrangingWords
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            flex: 1,
+            backgroundColor: "#FBB718",
+            borderRadius: 5,
+            margin: 5,
+            padding: 10,
+          }}
+          onPress={() => navigation.navigate("VarnasGame")}
+        >
+          <Image
+            source={{
+              uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmKHfKC_SE-bV13X3AGW2NRRUv-DcOXhBKtw&usqp=CAU",
+            }}
+            style={{
+              width: "100%",
+              height: 100,
+              borderRadius: 5,
+              marginBottom: 10,
+            }}
+          />
+          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
+            Varnas Game
+          </Text>
+        </TouchableOpacity>
+      </View>
       <View style={{ flexDirection: "row" }}>
         <TouchableOpacity
           style={{
@@ -80,56 +181,6 @@ const Games = ({ navigation }) => {
           />
           <Text style={{ textAlign: "center", fontWeight: "bold" }}>
             Tongue Twister
-          </Text>
-        </TouchableOpacity>
-      </View>
-
-      <View style={{ flexDirection: "row" }}>
-        <TouchableOpacity
-          style={{
-            flex: 1,
-            backgroundColor: "#FBB718",
-            borderRadius: 5,
-            margin: 5,
-            padding: 10,
-          }}
-          onPress={() => navigation.navigate("QuizGame")}
-        >
-          <Image
-            source={require("../../assets/quizsound.png")}
-            style={{
-              width: "100%",
-              height: 100,
-              borderRadius: 5,
-              marginBottom: 10,
-            }}
-          />
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            Quiz Game
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={{
-            flex: 1,
-            backgroundColor: "#FBB718",
-            borderRadius: 5,
-            margin: 5,
-            padding: 10,
-          }}
-          onPress={() => navigation.navigate("ArticulationMaze")}
-        >
-          <Image
-            source={require("../../assets/articulationmaze.png")}
-            style={{
-              width: "80%",
-              height: 100,
-              borderRadius: 5,
-              marginBottom: 10,
-              alignSelf: "center",
-            }}
-          />
-          <Text style={{ textAlign: "center", fontWeight: "bold" }}>
-            Articulation Maze
           </Text>
         </TouchableOpacity>
       </View>

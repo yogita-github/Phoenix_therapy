@@ -38,6 +38,12 @@ import CameraScreen from "./screens/components/CameraScreen";
 import LettersPage from './screens/LettersPage';
 import LetterDetail from './screens/LetterDetail';
 import HomeScreen from './screens/HomeScreen';
+import AdditionPage from './screens/components/AdditionPage';
+import DistortionPage from './screens/components/DistortionPage';
+import ArrangingWords from './screens/components/ArrangingWords';
+import OmissionPage from './screens/components/OmissionPage';
+import SubstitutionPage from './screens/components/SubstitutionPage';
+import VarnasGame from "./screens/components/Varnasgame";
 
 
 // import MirrorTherapy from "./screens/components/MirrorTherapy";
@@ -67,10 +73,9 @@ const App = () =>{
           {/* Add other screens or stacks as needed */}
       {/* </Drawer.Navigator> */}
 
-
       <Stack.Navigator initialRouteName="SplashScreen">
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
-{/* 
+        {/* 
       <Stack.Navigator initialRouteName="SplashScreen">
       
 
@@ -78,13 +83,12 @@ const App = () =>{
 
         {/* <Stack.Screen name="HomeScreen" component={HomeScreen} /> */}
 
-
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Test" component={Testing} />
         <Stack.Screen name="Games" component={Games} />
-        <Stack.Screen name="Barakhadi" component={Barakhadi}/>
+        <Stack.Screen name="Barakhadi" component={Barakhadi} />
         <Stack.Screen name="PeerInside" component={PeerInside} />
         <Stack.Screen name="HomeSide" component={HomeSide} />
         <Stack.Screen name="Sound Safari" component={Balloon} />
@@ -93,7 +97,12 @@ const App = () =>{
         <Stack.Screen name="CameraScreen" component={CameraScreen} />
         <Stack.Screen name="Therapy" component={Therapy} />
         <Stack.Screen name="Profile" component={Profile} />
-
+        <Stack.Screen name="AdditionPage" component={AdditionPage} />
+        <Stack.Screen name="DistortionPage" component={DistortionPage} />
+        <Stack.Screen name="OmissionPage" component={OmissionPage} />
+        <Stack.Screen name="SubstitutionPage" component={SubstitutionPage} />
+        <Stack.Screen name="ArrangingWords" component={ArrangingWords} />
+        <Stack.Screen name="VarnasGame" component={VarnasGame} />
         <Stack.Screen name="QuizGame" component={QuizGame} />
         <Stack.Screen name="TongueTwister" component={TongueTwister} />
         <Stack.Screen name="Sentence" component={Sentence} />
@@ -110,7 +119,11 @@ const App = () =>{
         <Stack.Screen name="TongueExercise" component={TongueExercise} />
         <Stack.Screen name="MouthExercise" component={MouthExercise} />
         <Stack.Screen name="Exercise" component={Exercise} />
-        <Stack.Screen name="LetsStart" component={LetsStart} options={{ headerShown: false }} />
+        <Stack.Screen
+          name="LetsStart"
+          component={LetsStart}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen name="SelfLearning" component={SelfLearning2} />
 
         <Stack.Screen name="StoryPage" component={StoryPage} />
