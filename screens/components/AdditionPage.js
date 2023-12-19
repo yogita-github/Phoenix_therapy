@@ -23,7 +23,7 @@ const AdditionPage = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.tipsTitle}><b>Addition Therapy</b></Text>
+      <Text style={styles.tipsTitle}>Addition Therapy</Text>
 
       <View style={styles.tipsContainer}>
         <Text style={styles.tipsTitle}>Tips:</Text>

@@ -23,7 +23,7 @@ const SubstitutionPage = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.tipsTitle}><b>Substitution Therapy</b></Text>
+      <Text style={styles.tipsTitle}>Substitution Therapy</Text>
 
       <View style={styles.tipsContainer}>
         <Text style={styles.tipsTitle}>Tips:</Text>

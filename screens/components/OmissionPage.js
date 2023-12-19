@@ -23,7 +23,7 @@ const OmissionPage = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.tipsTitle}><b>Omission Therapy</b></Text>
+      <Text style={styles.tipsTitle}>Omission Therapy</Text>
 
       <View style={styles.tipsContainer}>
         <Text style={styles.tipsTitle}>Tips:</Text>

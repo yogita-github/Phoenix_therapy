@@ -23,7 +23,7 @@ const DistortionPage = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.tipsTitle}><b>Distortion Therapy</b></Text>
+      <Text style={styles.tipsTitle}>Distortion Therapy</Text>
 
       <View style={styles.tipsContainer}>
         <Text style={styles.tipsTitle}>Tips:</Text>
