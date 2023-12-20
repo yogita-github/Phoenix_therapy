@@ -124,11 +124,11 @@ const styles = StyleSheet.create({
   sentencesText: {
     fontSize: 16,
     fontWeight: 'bold',
-    padding: 15,
+    padding: 15, 
     marginBottom: 20,
     lineHeight: 35,
     alignSelf: 'stretch',
-    textAlign: 'center',
+    // textAlign: 'center',
     color: '#333',
   },
   // wordContainer: {

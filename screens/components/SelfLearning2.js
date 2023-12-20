@@ -186,7 +186,7 @@ const SelfLearning2 = ({ navigation }) => {
         {/* New Box */}
         <TouchableOpacity
           style={styles.therapyContainer}
-          onPress={() => navigation.navigate("NewTherapy")}
+          onPress={() => navigation.navigate("Therapy")}
         >
           <View style={{ alignItems: "center", paddingHorizontal: 20 }}>
             <Image
@@ -251,7 +251,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#FBB718",
     borderRadius: 5,
     margin: 5,
-    marginBottom:50,
+    marginBottom:20,
     padding: 10,
   },
 });

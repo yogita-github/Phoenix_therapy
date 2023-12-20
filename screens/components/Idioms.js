@@ -1,9 +1,14 @@
 import React from "react";
-import { View, TouchableOpacity, Text, StyleSheet, Image } from "react-native";
+import { View, TouchableOpacity, Text, StyleSheet, Image,ScrollView } from "react-native";
 import { Audio } from "expo-av";
 import { useNavigation } from "@react-navigation/native"; // Add this line
 
 const audioFiles = [
+  require("../../assets/audio/I-1.wav"),
+  require("../../assets/audio/I-2.wav"),
+  require("../../assets/audio/I-3.wav"),
+  require("../../assets/audio/I-4.wav"),
+  require("../../assets/audio/I-5.wav"),
   require("../../assets/audio/I-1.wav"),
   require("../../assets/audio/I-2.wav"),
   require("../../assets/audio/I-3.wav"),
@@ -24,6 +29,7 @@ const Idioms = () => {
   };
 
   return (
+    <ScrollView>
     <View style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
@@ -39,7 +45,7 @@ const Idioms = () => {
           />
         </TouchableOpacity>
       </View>
-      {[...Array(5).keys()].map((index) => (
+      {[...Array(10).keys()].map((index) => (
         <TouchableOpacity
           key={index}
           style={[styles.button, { backgroundColor: getRandomColor() }]}
@@ -49,6 +55,7 @@ const Idioms = () => {
         </TouchableOpacity>
       ))}
     </View>
+    </ScrollView>
   );
 };
 

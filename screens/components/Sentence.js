@@ -1,9 +1,17 @@
 import React from "react";
-import { View, TouchableOpacity, Text, StyleSheet, Image } from "react-native";
+import { View, TouchableOpacity, Text, StyleSheet, Image,ScrollView } from "react-native";
 import { Audio } from "expo-av";
 import { useNavigation } from '@react-navigation/native';
 
 const audioFiles = [
+  require("../../assets/audio/S1.wav"),
+  require("../../assets/audio/S2.wav"),
+  require("../../assets/audio/S3.wav"),
+  require("../../assets/audio/S4.wav"),
+  require("../../assets/audio/S5.wav"),
+  require("../../assets/audio/S6.wav"),
+  require("../../assets/audio/S7.wav"),
+  require("../../assets/audio/S8.wav"),
   require("../../assets/audio/S1.wav"),
   require("../../assets/audio/S2.wav"),
   require("../../assets/audio/S3.wav"),
@@ -27,6 +35,7 @@ const Sentence = () => {
   };
 
   return (
+    <ScrollView>
     <View style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.navigate("LetsStart")}>
@@ -42,7 +51,7 @@ const Sentence = () => {
           />
         </TouchableOpacity>
       </View>
-      {[...Array(8).keys()].map((index) => (
+      {[...Array(16).keys()].map((index) => (
         <TouchableOpacity
           key={index}
           style={[styles.button, { backgroundColor: getRandomColor() }]}
@@ -52,6 +61,7 @@ const Sentence = () => {
         </TouchableOpacity>
       ))}
     </View>
+    </ScrollView>
   );
 };
 

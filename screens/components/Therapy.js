@@ -1,12 +1,8 @@
-// source={require("../../assets/Omission.png")}
-
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
 
 const Therapy = ({ navigation }) => {
   const handleContinue = () => {
-    // Handle continue logic here
-    // For simplicity, we are just navigating to the next page
     navigation.navigate('NextPage');
   };
 
@@ -56,63 +52,44 @@ const Therapy = ({ navigation }) => {
         <Text style={styles.subHeading}>Suggested Therapy using AI</Text>
 
         <View style={styles.yellowBoxesContainer}>
-          <View style={styles.imageBox}>
+          <TouchableOpacity style={styles.imageBox} onPress={() => navigation.navigate("SubstitutionPage")}>
             <Image
-              source={require("../../assets/Substitution.png")} // Replace with the actual path to your image
+              source={require("../../assets/Substitution.png")}
               style={styles.image}
             />
-            <Text
-              style={styles.whiteText}
-              onPress={() => navigation.navigate("SubstitutionPage")}
-            >
-              Substitution
-            </Text>
-          </View>
-          <View style={styles.imageBox}>
+            <Text style={styles.whiteText}>Substitution</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.imageBox} onPress={() => navigation.navigate("OmissionPage")}>
             <Image
-              source={require("../../assets/Omission.png")} // Replace with the actual path to your image
+              source={require("../../assets/Omission.png")}
               style={styles.image}
             />
-            <Text
-              style={styles.whiteText}
-              onPress={() => navigation.navigate("OmissionPage")}
-            >
-              Omission
-            </Text>
-          </View>
+            <Text style={styles.whiteText}>Omission</Text>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.yellowBoxesContainer}>
-          <View style={styles.imageBox}>
+          <TouchableOpacity style={styles.imageBox} onPress={() => navigation.navigate("AdditionPage")}>
             <Image
               source={require("../../assets/Addition.png")}
-              onPress={() => navigation.navigate("AdditionPage")} // Replace with the actual path to your image
               style={styles.image}
             />
-            <Text
-              style={styles.whiteText}
-              onPress={() => navigation.navigate("AdditionPage")}
-            >
-              Addition
-            </Text>
-          </View>
-          <View style={styles.imageBox}>
+            <Text style={styles.whiteText}>Addition</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.imageBox} onPress={() => navigation.navigate("DistortionPage")}>
             <Image
-              source={require("../../assets/Distortion.png")} // Replace with the actual path to your image
+              source={require("../../assets/Distortion.png")}
               style={styles.image}
             />
-            <Text
-              style={styles.whiteText}
-              onPress={() => navigation.navigate("DistortionPage")}
-            >
-              Distortion
-            </Text>
-          </View>
+            <Text style={styles.whiteText}>Distortion</Text>
+          </TouchableOpacity>
         </View>
 
         {/* <TouchableOpacity style={styles.yellowButton} onPress={handleContinue}>
-        <Text style={styles.buttonText}>Continue</Text>
-      </TouchableOpacity> */}
+          <Text style={styles.buttonText}>Continue</Text>
+        </TouchableOpacity> */}
       </View>
     </ScrollView>
   );
